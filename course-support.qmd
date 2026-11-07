@@ -7,7 +7,3 @@ title: "Unterstützung"
 Fragen zu Beispielen, Übungen und Methoden können in der Vorlesung oder im Forum des aktuellen [Moodle-Kurses](https://moodle.hdm-stuttgart.de/login/index.php) besprochen werden.
 
 Bei technischen Fragen helfen der ausgeführte Befehl, die vollständige Fehlermeldung und das verwendete Betriebssystem. Zugangsdaten und vertrauliche Daten dürfen nicht im Forum stehen.
-
-## Persönliche Anliegen
-
-Für persönliche Anliegen ist [kirenz@hdm-stuttgart.de](mailto:kirenz@hdm-stuttgart.de) erreichbar. Der Kursname im Betreff erleichtert die Zuordnung.
