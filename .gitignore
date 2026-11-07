@@ -24,3 +24,4 @@ howto.qmd
 /slides/env/
 /_*.local
 /_site/
+**/*.quarto_ipynb
