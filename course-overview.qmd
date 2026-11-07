@@ -14,7 +14,7 @@ Die folgende Übersicht zeigt die vorläufige Aufteilung für das Wintersemester
 
 | Thema | Online-Selbststudium | Präsenz |
 |---|---|---|
-| **KI und Arbeitsumgebung** | Vollständiger Kurs [Produktiv mit einem Agenten arbeiten](https://kirenz.github.io/agent-arbeitsumgebung/); [Python-Umgebung einrichten](programming-requirements.qmd) | Bedeutung von KI für die eigene Arbeit und Rolle; erste Analyseaufträge und fachliche Gegenprüfung |
+| **KI und Arbeitsumgebung** | Vollständiger Kurs [Produktiv mit einem Agenten arbeiten](https://kurse.kirenz.de/courses/agent-arbeitsumgebung); [Python-Umgebung einrichten](programming-requirements.qmd) | Bedeutung von KI für die eigene Arbeit und Rolle; erste Analyseaufträge und fachliche Gegenprüfung |
 | **Fragestellung und Lifecycle** | Anwendungsfall auswählen, Problem eingrenzen, Variablen und Kennzahlen bestimmen | Datenbasierte Entscheidungen; Data-Science-Lifecycle; eine Fragestellung gemeinsam konkretisieren |
 | **Daten und Studiendesign** | Population und Stichprobe; Stichprobenverfahren; Experimente und Beobachtungsstudien | Erste Datenanalyse am Netflix-Beispiel; Fälle und Variablen; Konsequenzen des Studiendesigns |
 | **Kategoriale Daten** | Kreditdatensatz kennenlernen; Zeilen- und Spaltenanteile nacharbeiten; Kreisdiagramme | Kreuztabellen aus absoluten Häufigkeiten aufbauen; Bezugsgrößen erklären; einfache, gestapelte und standardisierte Balkendiagramme |

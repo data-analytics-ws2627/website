@@ -4,7 +4,7 @@ title: "Coding-Agenten für Analyseaufträge"
 
 ## Grundlagenkurs
 
-[Produktiv mit einem Agenten arbeiten](https://kirenz.github.io/agent-arbeitsumgebung/) bleibt ein vollständiger, eigenständiger Kurs am Anfang. Er behandelt Projektordner, erste Aufträge, AGENTS.md, Skills und MCP. Danach beginnt hier die Anwendung auf Datenanalysen.
+[Produktiv mit einem Agenten arbeiten](https://kurse.kirenz.de/courses/agent-arbeitsumgebung) bleibt ein vollständiger, eigenständiger Kurs am Anfang. Er behandelt Projektordner, erste Aufträge, AGENTS.md, Skills und MCP. Danach beginnt hier die Anwendung auf Datenanalysen.
 
 ## Ein begrenzter Analyseauftrag
 

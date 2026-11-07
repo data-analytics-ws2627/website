@@ -13,7 +13,7 @@ Im Mittelpunkt steht die Fähigkeit, eine Datenanalyse mit KI selbstständig zu 
 
 ## Einstieg
 
-1. Den vollständigen Grundlagenkurs [Produktiv mit einem Agenten arbeiten](https://kirenz.github.io/agent-arbeitsumgebung/) bearbeiten.
+1. Den vollständigen Grundlagenkurs [Produktiv mit einem Agenten arbeiten](https://kurse.kirenz.de/courses/agent-arbeitsumgebung) bearbeiten.
 2. Die [Python-Umgebung und das Statistik-Labor einrichten](programming-requirements.qmd).
 3. Mit den [bestehenden Folien und Notebooks](course-materials.qmd) in die Datenanalyse einsteigen.
 
