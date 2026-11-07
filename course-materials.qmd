@@ -152,3 +152,17 @@ Die Materialien folgen der bisherigen Erklärfolge. Zu jedem Thema stehen die zu
 |---|---|---|---|
 | Data storytelling (Vertiefung) |  | [Materialien](data-storytelling.qmd) |  |
 | Generative AI (Vertiefung) |  | [Coding-Agenten](coding-agents.qmd) |  |
+
+
+## GitHub-Übungsvorlagen
+
+Die Vorlagen liefern eine eigene Arbeitskopie mit Aufgaben und Startanleitung. Zugriff erfolgt über das für den Kurs freigeschaltete GitHub-Konto.
+
+| Vorlage | Verwendung |
+|---|---|
+| [GitHub-Einstieg](https://github.com/data-analytics-ws2627/github-starter-course) | Branch, Commit und Pull Request kennenlernen |
+| [Pandas-Übungen](https://github.com/data-analytics-ws2627/ae-pandas) | Daten einlesen, aufbereiten und untersuchen |
+| [Modellübungen](https://github.com/data-analytics-ws2627/ae-models) | Vorhersagen, Fehlermaße und Regression nachvollziehen |
+| [Projektvorlage](https://github.com/data-analytics-ws2627/project) | Eigene Analyse strukturiert entwickeln und dokumentieren |
+
+Die Python-Vorlagen enthalten jeweils ihre eigene uv-Umgebung. Die Startschritte stehen in der README der Arbeitskopie. Aufgabenstellen in den Übungsnotebooks bleiben zur eigenen Bearbeitung offen.
