@@ -31,6 +31,7 @@ Die Statistik folgt den Folien und *Introduction to Modern Statistics*: Frageste
 
 - [BPMN: Data-Science-Prozesse gestalten](bpmn.qmd)
 - [Coding-Agenten für Analyseaufträge nutzen](coding-agents.qmd)
+- [Agents mit Google ADK entwickeln](agents.qmd)
 - [Data Storytelling](data-storytelling.qmd)
 - [Eigenes Analyseprojekt](project-description.qmd)
 

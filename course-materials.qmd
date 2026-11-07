@@ -191,6 +191,13 @@ Ergänzend: [Lasso-Regression](https://kirenz.github.io/regression/docs/lasso.ht
 | Einen Analyseprozess modellieren | | [Lifecycle-Übung](bpmn.qmd#bpmn-analyseauftrag) | | Übung |
 | Analyseauftrag an einen Coding-Agenten und Gegenprüfung | | [Coding-Agenten für Analyseaufträge](coding-agents.qmd) | [Statistik-Labor](downloads/statistik-lab.zip) | Präsenz und Übung |
 
+## Agents mit Google ADK
+
+| Thema | Literatur | Materialien | Code | Arbeitsform |
+|---|---|---|---|---|
+| Einen eigenen Agenten entwickeln und prüfen | [Google ADK 2](https://kirenz.github.io/google-adk-2/) | [Lernweg und Übung](agents.qmd) · [Plattformkurs](https://kirenz.iuk.hdm-stuttgart.de/courses/agentic-ai) | [Beispiele zum Buch](https://github.com/kirenz/google-adk-2/tree/main/examples) | Selbststudium und Übung |
+| BI-Agent: Abfrage, Tabelle und Diagramm | [BI-Projekt](https://kirenz.github.io/google-adk-2/chapters/10-bi-project.html) | [Einordnung](agents.qmd#lernweg-für-data-analytics) | [Beispiele zum Buch](https://github.com/kirenz/google-adk-2/tree/main/examples) | Optional |
+
 ## GitHub-Übungsvorlagen
 
 Die Vorlagen liefern eine eigene Arbeitskopie mit Aufgaben und Startanleitung. Zugriff erfolgt über das für den Kurs freigeschaltete GitHub-Konto.

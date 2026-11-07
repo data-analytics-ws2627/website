@@ -1,0 +1,43 @@
+---
+title: "Agents mit Google ADK"
+---
+
+## Von der Frage zum Werkzeugaufruf
+
+Wie kann ein Agent eine Frage zu Daten beantworten und seine Berechnung nachvollziehbar machen? Ein Sprachmodell kann ein geeignetes Werkzeug auswählen und dessen Ergebnis erklären. Eine Python-Funktion übernimmt dabei beispielsweise eine Berechnung. Ob das richtige Werkzeug mit den passenden Eingaben verwendet wurde, lässt sich am Ablauf prüfen.
+
+Bei den [Coding-Agenten für Analyseaufträge](coding-agents.qmd) steht die Nutzung einer vorhandenen Anwendung im Mittelpunkt. Hier geht es um den Bau eines eigenen Agenten: Aufgabe, Werkzeuge und Prüfungen werden im eigenen Python-Projekt festgelegt.
+
+## Kurs in der Lernplattform
+
+Der englischsprachige Kurs **Agentic AI with Coding Frameworks** behandelt den Agentenbau mit Google ADK und LangGraph. Das durchgehende Beispiel ist ein Support-Assistent für ein fiktives Produkt. Für den Einstieg in Google ADK sind die Grundlagen, der erste Agent, Funktionswerkzeuge und die Prüfung der ausgeführten Aktionen relevant.
+
+[Agentic AI in der Lernplattform öffnen](https://kirenz.iuk.hdm-stuttgart.de/courses/agentic-ai){.btn .btn-primary}
+
+## Lernweg für Data Analytics
+
+Das englischsprachige Buch [Google ADK 2](https://kirenz.github.io/google-adk-2/) ergänzt den Plattformkurs um ein Beispiel zur Datenanalyse. Der Einstieg verwendet eine kleine Berechnung. Später verbindet ein BI-Projekt eine Frage mit einer SQL-Abfrage, einer Ergebnistabelle und einem Diagramm.
+
+| Abschnitt | Anwendung |
+|---|---|
+| [Grundlagen](https://kirenz.github.io/google-adk-2/chapters/01-agent-fundamentals.html) | Aufgabe, Sprachmodell und Werkzeuge eines Agenten unterscheiden |
+| [Erster Agent](https://kirenz.github.io/google-adk-2/chapters/04-first-agent.html) | Einen Auftragswert aus Stückpreis und Menge berechnen und den Werkzeugaufruf prüfen |
+| [Werkzeuge und Kontext](https://kirenz.github.io/google-adk-2/chapters/05-tools-context.html) | Eingaben und Ergebnisse einer Python-Funktion festlegen |
+| [Evaluation](https://kirenz.github.io/google-adk-2/chapters/11-evaluation.html) | Antwort und tatsächlich ausgeführte Aktionen anhand von Testfällen prüfen |
+| [BI-Projekt](https://kirenz.github.io/google-adk-2/chapters/10-bi-project.html) | SQL-Abfrage, Tabelle, Diagramm und Erklärung gemeinsam überprüfen |
+
+Die [Vorbereitung im Buch](https://kirenz.github.io/google-adk-2/chapters/02-workstation.html) beschreibt die benötigte Umgebung. Modellgestützte Beispiele benötigen einen eingerichteten Modellzugang. Das BI-Projekt enthält auch eine lokale Demonstration mit synthetischen Daten und einer festen Abfrage ohne Modellaufruf.
+
+## Übung: Berechnung und Antwort vergleichen
+
+Voraussetzung: Die Vorbereitung und das Kapitel „A first ADK agent“ sind abgeschlossen. Der Beispielagent kann gestartet werden.
+
+1. Stelle eine Frage zum Auftragswert von drei Artikeln zu jeweils 499,95 Euro.
+2. Prüfe im Ablauf, welche Werte an das Rechenwerkzeug übergeben wurden.
+3. Vergleiche Werkzeugergebnis und Antwort mit der Gegenrechnung: 3 × 499,95 Euro = 1.499,85 Euro.
+4. Stelle in einer neuen Sitzung dieselbe Frage ohne Stückpreis.
+5. Prüfe, ob der Agent den fehlenden Preis erfragt, statt einen Wert zu erfinden.
+
+Prüfkriterium: Eingaben, Werkzeugergebnis und Antwort stimmen überein. Fehlende Angaben werden erkennbar, statt durch erfundene Zahlen ersetzt zu werden.
+
+Für die Datenanalyse gilt dieselbe Prüfung: Eine korrekt ausgeführte Berechnung genügt nur dann, wenn Daten, Filter und Bezugsgröße zur Frage passen. Die [BPMN-Beispiele](bpmn.qmd) zeigen, wo diese fachliche Prüfung im Analyseprozess liegt.

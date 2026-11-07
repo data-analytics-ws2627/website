@@ -24,6 +24,7 @@ Die kompakte Übersicht zeigt einen Planungsvorschlag für das Wintersemester 20
 | **Statistische Inferenz** | Erklärte Beispiele und Notebooks zu Stichprobenstreuung, Konfidenzintervallen und Hypothesentests nacharbeiten | Zufallsschwankungen schrittweise untersuchen; Resampling; Unsicherheit und statistische Schlussfolgerungen |
 | **Wahrscheinlichkeit und Bayes** | Folien und Video zu bedingten Wahrscheinlichkeiten und Bayes | Offene Fragen anhand konkreter Beispiele klären |
 | **Prozesse und Coding-Agenten** | [BPMN-Grundlagen](bpmn.qmd) einschließlich Übungen und Selbstchecks; [Analyseaufträge mit Coding-Agenten](coding-agents.qmd) | Analyseprozess mit Rollen, Entscheidungen und Rückwegen modellieren; KI-generierte Berechnungen fachlich prüfen |
+| **Agents mit Google ADK** | [Lernweg und Plattformkurs](agents.qmd): eigener Agent, Funktionswerkzeuge und Testfälle | Werkzeugaufrufe und Ergebnisse am Rechenbeispiel prüfen; Übertragung auf Datenanalysen |
 | **Data Storytelling und Projekt** | [Data Storytelling](data-storytelling.qmd); eigene Analyse im [Teamprojekt](project-description.qmd) entwickeln und dokumentieren | Aussagen, Grafiken und Grenzen einer Analyse besprechen; Rückmeldung zu Fragestellung und Vorgehen |
 
 ## Übungen und Vertiefung
