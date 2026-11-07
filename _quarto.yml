@@ -10,6 +10,8 @@ project:
     - bpmn.qmd
     - coding-agents.qmd
     - agents.qmd
+    - agents-tools.qmd
+    - agents-data.qmd
     - data-storytelling.qmd
     - project-description.qmd
     - project-tips-resources.qmd
@@ -85,7 +87,11 @@ website:
         contents:
           - bpmn.qmd
           - coding-agents.qmd
-          - agents.qmd
+          - section: "Agents mit Google ADK"
+            contents:
+              - agents.qmd
+              - agents-tools.qmd
+              - agents-data.qmd
           - data-storytelling.qmd
 
       - section: "Einrichtung"

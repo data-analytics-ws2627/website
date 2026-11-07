@@ -1,43 +1,125 @@
 ---
-title: "Agents mit Google ADK"
+title: "1. Ein erster Agent"
 ---
 
-## Von der Frage zum Werkzeugaufruf
+Ein KI-Agent verbindet ein Sprachmodell mit einer Aufgabe und gegebenenfalls mit Werkzeugen. Google ADK (Agent Development Kit) stellt dafür Python-Bausteine und eine Oberfläche zum Ausprobieren bereit.
 
-Wie kann ein Agent eine Frage zu Daten beantworten und seine Berechnung nachvollziehbar machen? Ein Sprachmodell kann ein geeignetes Werkzeug auswählen und dessen Ergebnis erklären. Eine Python-Funktion übernimmt dabei beispielsweise eine Berechnung. Ob das richtige Werkzeug mit den passenden Eingaben verwendet wurde, lässt sich am Ablauf prüfen.
+Das Beispiel beginnt mit einem Assistenten, der Begriffe der Datenanalyse erklärt. Danach erhält er ein [Rechenwerkzeug](agents-tools.qmd). Im dritten Schritt beantwortet er Fragen zu einer [Umsatzdatei](agents-data.qmd).
 
-Bei den [Coding-Agenten für Analyseaufträge](coding-agents.qmd) steht die Nutzung einer vorhandenen Anwendung im Mittelpunkt. Hier geht es um den Bau eines eigenen Agenten: Aufgabe, Werkzeuge und Prüfungen werden im eigenen Python-Projekt festgelegt.
+## Übungspaket vorbereiten
 
-## Kurs in der Lernplattform
+Voraussetzungen: uv ist nach der [Einrichtungsanleitung](programming-requirements.qmd#uv-installieren) installiert. Ein Code-Editor ist verfügbar. Für die Unterhaltung mit dem Agenten ist ein Gemini-API-Schlüssel erforderlich.
 
-Der englischsprachige Kurs **Agentic AI with Coding Frameworks** behandelt den Agentenbau mit Google ADK und LangGraph. Das durchgehende Beispiel ist ein Support-Assistent für ein fiktives Produkt. Für den Einstieg in Google ADK sind die Grundlagen, der erste Agent, Funktionswerkzeuge und die Prüfung der ausgeführten Aktionen relevant.
+1. Lade das [ADK-Labor](downloads/agents-lab.zip) herunter.
+2. Entpacke die ZIP-Datei.
+3. Öffne den Ordner `agents-lab` im Code-Editor.
+4. Öffne das integrierte Terminal in diesem Ordner.
+5. Installiere die festgelegten Paketversionen:
 
-[Agentic AI in der Lernplattform öffnen](https://kirenz.iuk.hdm-stuttgart.de/courses/agentic-ai){.btn .btn-primary}
+```bash
+uv sync --locked
+```
 
-## Lernweg für Data Analytics
+uv richtet eine eigene Python-Umgebung für dieses Labor ein. Das Statistik-Labor bleibt ein separates Projekt.
 
-Das englischsprachige Buch [Google ADK 2](https://kirenz.github.io/google-adk-2/) ergänzt den Plattformkurs um ein Beispiel zur Datenanalyse. Der Einstieg verwendet eine kleine Berechnung. Später verbindet ein BI-Projekt eine Frage mit einer SQL-Abfrage, einer Ergebnistabelle und einem Diagramm.
+6. Prüfe die Werkzeuge ohne Modellzugang:
 
-| Abschnitt | Anwendung |
-|---|---|
-| [Grundlagen](https://kirenz.github.io/google-adk-2/chapters/01-agent-fundamentals.html) | Aufgabe, Sprachmodell und Werkzeuge eines Agenten unterscheiden |
-| [Erster Agent](https://kirenz.github.io/google-adk-2/chapters/04-first-agent.html) | Einen Auftragswert aus Stückpreis und Menge berechnen und den Werkzeugaufruf prüfen |
-| [Werkzeuge und Kontext](https://kirenz.github.io/google-adk-2/chapters/05-tools-context.html) | Eingaben und Ergebnisse einer Python-Funktion festlegen |
-| [Evaluation](https://kirenz.github.io/google-adk-2/chapters/11-evaluation.html) | Antwort und tatsächlich ausgeführte Aktionen anhand von Testfällen prüfen |
-| [BI-Projekt](https://kirenz.github.io/google-adk-2/chapters/10-bi-project.html) | SQL-Abfrage, Tabelle, Diagramm und Erklärung gemeinsam überprüfen |
+```bash
+uv run --locked pytest
+```
 
-Die [Vorbereitung im Buch](https://kirenz.github.io/google-adk-2/chapters/02-workstation.html) beschreibt die benötigte Umgebung. Modellgestützte Beispiele benötigen einen eingerichteten Modellzugang. Das BI-Projekt enthält auch eine lokale Demonstration mit synthetischen Daten und einer festen Abfrage ohne Modellaufruf.
+**Prüfkriterium:** Die Tests melden ausschließlich bestandene Prüfungen (`passed`). Dabei werden keine Anfragen an ein Sprachmodell gesendet.
 
-## Übung: Berechnung und Antwort vergleichen
+## Modellzugang einrichten
 
-Voraussetzung: Die Vorbereitung und das Kapitel „A first ADK agent“ sind abgeschlossen. Der Beispielagent kann gestartet werden.
+Der Agent läuft als Python-Anwendung auf dem eigenen Rechner. Die Antworten erzeugt das konfigurierte Gemini-Modell über die API. Der API-Schlüssel erlaubt den Zugriff darauf.
 
-1. Stelle eine Frage zum Auftragswert von drei Artikeln zu jeweils 499,95 Euro.
-2. Prüfe im Ablauf, welche Werte an das Rechenwerkzeug übergeben wurden.
-3. Vergleiche Werkzeugergebnis und Antwort mit der Gegenrechnung: 3 × 499,95 Euro = 1.499,85 Euro.
-4. Stelle in einer neuen Sitzung dieselbe Frage ohne Stückpreis.
-5. Prüfe, ob der Agent den fehlenden Preis erfragt, statt einen Wert zu erfinden.
+1. Öffne [Google AI Studio](https://aistudio.google.com/apikey).
+2. Erstelle einen API-Schlüssel für ein verfügbares Projekt.
+3. Kopiere im Code-Editor die Datei `.env.example` als `.env`.
+4. Ersetze in `.env` den Platzhalter bei `GOOGLE_API_KEY` durch den eigenen Schlüssel.
 
-Prüfkriterium: Eingaben, Werkzeugergebnis und Antwort stimmen überein. Fehlende Angaben werden erkennbar, statt durch erfundene Zahlen ersetzt zu werden.
+Die Zeile `GEMINI_MODEL` bestimmt das Modell. Der voreingestellte Alias `gemini-flash-latest` kann sich ändern. Für einen Vergleich mehrerer Durchläufe sollten Modellbezeichnung und Datum notiert werden.
 
-Für die Datenanalyse gilt dieselbe Prüfung: Eine korrekt ausgeführte Berechnung genügt nur dann, wenn Daten, Filter und Bezugsgröße zur Frage passen. Die [BPMN-Beispiele](bpmn.qmd) zeigen, wo diese fachliche Prüfung im Analyseprozess liegt.
+::: {.callout-warning}
+Der API-Schlüssel gehört ausschließlich in die lokale `.env`. Er darf weder in GitHub noch in Screenshots oder Chatnachrichten erscheinen. Modellaufrufe unterliegen den verfügbaren Kontingenten und können Kosten verursachen.
+:::
+
+## Aufbau des Agenten
+
+Der Ordner `intro_agent` enthält die Datei `agent.py`. Darin steht die Agentenkonfiguration:
+
+```python
+import os
+from pathlib import Path
+
+from dotenv import load_dotenv
+from google.adk import Agent
+
+load_dotenv(Path(__file__).resolve().parents[1] / ".env")
+
+root_agent = Agent(
+    name="intro_agent",
+    model=os.getenv("GEMINI_MODEL", "gemini-flash-latest"),
+    instruction=(
+        "Erkläre Begriffe der Datenanalyse auf Deutsch in höchstens drei Sätzen. "
+        "Verwende ein kurzes Beispiel. Du hast keinen Zugriff auf Dateien oder Werkzeuge. "
+        "Kennzeichne erfundene Beispieldaten als solche."
+    ),
+)
+```
+
+- `load_dotenv()` lädt die Einstellungen aus `.env`.
+- `name` benennt den Agenten.
+- `model` legt das Sprachmodell fest.
+- `instruction` beschreibt seine Aufgabe.
+- `root_agent` ist der Einstiegspunkt, den ADK beim Laden des Ordners sucht.
+
+Der Agent hat noch kein Werkzeug und keinen Zugriff auf die Umsatzdatei. Seine Erklärungen entstehen aus dem Modellwissen und dem Gesprächskontext.
+
+## Agenten starten
+
+1. Starte die lokale Oberfläche im Ordner `agents-lab`:
+
+```bash
+uv run --locked adk web .
+```
+
+2. Öffne die im Terminal angezeigte lokale Adresse im Browser.
+3. Wähle `intro_agent` in der Agentenauswahl.
+4. Sende diesen Auftrag:
+
+```text
+Kontext:
+Eine Umsatzdatei enthält einzelne Bestellungen.
+
+Aufgabe:
+Erkläre den Unterschied zwischen Gesamtumsatz und durchschnittlichem Bestellwert.
+
+Format:
+Verwende zwei Bestellungen mit 100 Euro und 300 Euro als Beispiel.
+
+Prüfung:
+Zeige für beide Kennzahlen die Rechnung und die Einheit.
+```
+
+**Prüfkriterium:** Die Antwort nennt 400 Euro Gesamtumsatz und 200 Euro je Bestellung. Die Rechnungen müssen zur jeweiligen Kennzahl passen.
+
+Bei einem Zugangsfehler sind API-Schlüssel, Modellzugang und Kontingent zu prüfen. Die lokalen Werkzeugtests funktionieren auch ohne Modellzugang.
+
+## Übung: Die Anweisung verändern
+
+1. Ergänze `instruction` in `intro_agent/agent.py` um: `Erkläre jeden Fachbegriff beim ersten Auftreten.`
+2. Speichere die Datei.
+3. Beende den laufenden Server im Terminal mit `Ctrl+C`.
+4. Starte ihn erneut mit `uv run --locked adk web .`.
+5. Öffne eine neue Sitzung für `intro_agent`.
+6. Wiederhole den Auftrag zum Bestellwert.
+
+**Prüfkriterium:** Die Antwort erläutert die Kennzahlen und behält die korrekten Zahlen bei. Eine Anweisung beeinflusst die Antwort, garantiert aber keine korrekte Erklärung.
+
+Weiter: [Ein eigenes Rechenwerkzeug](agents-tools.qmd).
+
+## Quellen und Vertiefung
+
+Die Übungen übernehmen den Aufbau aus dem [ADK-Kurs](https://kirenz.iuk.hdm-stuttgart.de/courses/agentic-ai) und dem Buch [Google ADK 2](https://kirenz.github.io/google-adk-2/). Die Beispiele sind für diesen Kurs vereinfacht. Die [offizielle Python-Einführung](https://adk.dev/get-started/python/) beschreibt den Einstieg in ADK.

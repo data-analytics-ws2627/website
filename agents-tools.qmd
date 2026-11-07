@@ -1,0 +1,160 @@
+---
+title: "2. Ein eigenes Rechenwerkzeug"
+---
+
+Ein Werkzeug (Tool) ist eine Funktion, die der Agent aufrufen kann. Das Sprachmodell bestimmt die Eingaben. Python führt die Berechnung aus und liefert das Ergebnis zurück.
+
+Für einen Auftrag mit drei Artikeln zu je 499,95 Euro beträgt der Gesamtwert 1.499,85 Euro. Diese Rechnung übernimmt im Labor die Funktion `calculate_order_total`.
+
+## Eine Python-Funktion als Werkzeug
+
+Voraussetzung: Das [ADK-Labor](agents.qmd#übungspaket-vorbereiten) ist eingerichtet.
+
+Der Rechenkern verwendet `Decimal`, damit Geldbeträge mit Dezimalzahlen verarbeitet werden:
+
+```python
+from decimal import Decimal, ROUND_HALF_UP
+
+price = Decimal("499.95")
+quantity = 3
+total = (price * quantity).quantize(
+    Decimal("0.01"), rounding=ROUND_HALF_UP
+)
+print(total)  # 1499.85
+```
+
+`quantize` rundet das Ergebnis auf zwei Nachkommastellen. `ROUND_HALF_UP` legt fest, wie ein Betrag genau zwischen zwei Centwerten gerundet wird.
+
+Die vollständige Funktion im Paket nimmt `unit_price` und `quantity` entgegen. Sie prüft die Eingaben vor der Rechnung. Ein negativer Preis oder eine negative Menge darf kein erfolgreiches Ergebnis liefern.
+
+Eine Funktionsbeschreibung, der sogenannte Docstring, erklärt dem Modell den Zweck des Werkzeugs. Typangaben wie `float` und `int` beschreiben die erwarteten Eingaben. Die Prüfung im Funktionskörper kontrolliert zusätzlich, ob diese Werte zulässig sind.
+
+Die vollständige Funktion steht in `calculator_agent/tools.py`:
+
+```python
+"""Berechnung nach dem ersten Agentenbeispiel aus Google ADK 2."""
+from decimal import Decimal, ROUND_HALF_UP
+
+
+def calculate_order_total(unit_price: float, quantity: int) -> dict:
+    """Berechne den Auftragswert in EUR aus Stückpreis und Menge.
+
+    Args:
+        unit_price: Endlicher Stückpreis zwischen 0 und 1000000 Euro.
+        quantity: Ganze Stückzahl zwischen 0 und 10000.
+    """
+    if isinstance(unit_price, bool) or not isinstance(unit_price, (int, float)):
+        raise ValueError("Der Stückpreis muss eine Zahl sein.")
+    price = Decimal(str(unit_price))
+    if not price.is_finite() or price < 0 or price > 1_000_000:
+        raise ValueError("Der Stückpreis muss zwischen 0 und 1000000 Euro liegen.")
+    if isinstance(quantity, bool) or not isinstance(quantity, int) or not 0 <= quantity <= 10_000:
+        raise ValueError("Die Menge muss eine ganze Zahl zwischen 0 und 10000 sein.")
+    total = (price * quantity).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+    return {"currency": "EUR", "total": str(total), "quantity": quantity}
+```
+
+Ein direkter Aufruf im Terminal prüft die Rechnung ohne Modell:
+
+```bash
+uv run --locked python -c "from calculator_agent.tools import calculate_order_total; print(calculate_order_total(499.95, 3))"
+```
+
+## Werkzeug anbinden
+
+In `calculator_agent/agent.py` erhält der Agent das Werkzeug über `tools`:
+
+```python
+import os
+from pathlib import Path
+
+from dotenv import load_dotenv
+from google.adk import Agent
+
+load_dotenv(Path(__file__).resolve().parents[1] / ".env")
+
+from .tools import calculate_order_total
+
+root_agent = Agent(
+    name="calculator_agent",
+    model=os.getenv("GEMINI_MODEL", "gemini-flash-latest"),
+    instruction=(
+        "Berechne Auftragswerte ausschließlich mit calculate_order_total. "
+        "Frage nach fehlendem Stückpreis oder fehlender Menge. Erfinde keine Eingaben. "
+        "Erkläre das Werkzeugergebnis kurz auf Deutsch. Melde ungültige Eingaben."
+    ),
+    tools=[calculate_order_total],
+)
+```
+
+Der Import aus `.tools` lädt die Funktion aus `calculator_agent/tools.py`. Der Punkt bezeichnet das eigene Python-Paket.
+
+Der Ablauf besteht aus vier Schritten: Das Modell schlägt einen Funktionsaufruf vor. ADK führt die Python-Funktion aus. Das Ergebnis geht an das Modell zurück. Daraus formuliert das Modell die Antwort.
+
+## Übung: Einen Werkzeugaufruf prüfen
+
+1. Starte die Oberfläche mit `uv run --locked adk web .`.
+2. Wähle `calculator_agent`.
+3. Sende diesen Auftrag:
+
+```text
+Kontext:
+Ein Auftrag umfasst drei Artikel zu jeweils 499,95 Euro.
+
+Aufgabe:
+Berechne den Auftragswert mit dem Rechenwerkzeug.
+
+Format:
+Nenne Stückpreis, Menge und Gesamtwert in Euro.
+
+Prüfung:
+Verwende ausschließlich die angegebenen Werte.
+```
+
+4. Öffne in der Oberfläche die Ereignisse beziehungsweise den Trace des Durchlaufs.
+5. Suche den Aufruf von `calculate_order_total`.
+6. Vergleiche die Argumente mit `unit_price = 499.95` und `quantity = 3`.
+7. Vergleiche das Werkzeugergebnis mit der Antwort und der eigenen Gegenrechnung.
+
+**Prüfkriterium:** Der Werkzeugaufruf enthält die beiden angegebenen Werte. Werkzeugergebnis und Antwort ergeben 1.499,85 Euro. Eine richtige Zahl ohne beobachteten Werkzeugaufruf erfüllt diese Prüfung noch nicht.
+
+## Übung: Fehlende und ungültige Werte
+
+Jeder Test beginnt in einer neuen Sitzung. So kann der Agent keinen Stückpreis aus dem vorherigen Gespräch übernehmen.
+
+| Eingabe | Erwartetes Verhalten |
+|---|---|
+| „Berechne den Auftragswert für drei Artikel.“ | Der Agent fragt nach dem Stückpreis. |
+| „Berechne drei Artikel zu je minus 10 Euro.“ | Der Agent weist die Eingabe zurück oder das Werkzeug meldet einen Fehler. |
+| „Berechne null Artikel zu je 499,95 Euro.“ | Der Gesamtwert beträgt 0 Euro. |
+
+1. Führe die drei Testfälle aus.
+2. Notiere jeweils Eingabe, beobachteten Werkzeugaufruf und Antwort.
+3. Vergleiche die Beobachtung mit dem erwarteten Verhalten.
+
+**Prüfkriterium:** Fehlende Werte werden nicht erfunden. Ungültige Eingaben führen zu keinem erfolgreichen Auftragswert.
+
+## Codeübung: Mengenbegrenzung
+
+Eine Übungsvariante erlaubt höchstens fünf Artikel je Auftrag.
+
+1. Öffne `calculator_agent/tools.py`.
+2. Ändere die zulässige Höchstmenge von 10.000 auf 5.
+3. Passe die Funktionsbeschreibung und die Fehlermeldung an.
+4. Prüfe die zulässige Menge im Terminal:
+
+```bash
+uv run --locked python -c "from calculator_agent.tools import calculate_order_total; print(calculate_order_total(10, 5))"
+```
+
+5. Prüfe die überschrittene Grenze:
+
+```bash
+uv run --locked python -c "from calculator_agent.tools import calculate_order_total; print(calculate_order_total(10, 6))"
+```
+
+**Prüfkriterium:** Fünf Artikel zu 10 Euro ergeben 50 Euro. Sechs Artikel werden zurückgewiesen. Ein Chat allein ersetzt den direkten Funktionstest nicht.
+
+Die Begrenzung gehört in den Python-Code. Eine Anweisung an das Modell kann erklären, welche Mengen erlaubt sind, erzwingt diese Grenze jedoch nicht.
+
+Weiter: [Ein Agent für Datenanalysen](agents-data.qmd). Hintergrund: [ADK-Funktionswerkzeuge](https://adk.dev/tools-custom/function-tools/).

@@ -193,10 +193,11 @@ Ergänzend: [Lasso-Regression](https://kirenz.github.io/regression/docs/lasso.ht
 
 ## Agents mit Google ADK
 
-| Thema | Literatur | Materialien | Code | Arbeitsform |
-|---|---|---|---|---|
-| Einen eigenen Agenten entwickeln und prüfen | [Google ADK 2](https://kirenz.github.io/google-adk-2/) | [Lernweg und Übung](agents.qmd) · [Plattformkurs](https://kirenz.iuk.hdm-stuttgart.de/courses/agentic-ai) | [Beispiele zum Buch](https://github.com/kirenz/google-adk-2/tree/main/examples) | Selbststudium und Übung |
-| BI-Agent: Abfrage, Tabelle und Diagramm | [BI-Projekt](https://kirenz.github.io/google-adk-2/chapters/10-bi-project.html) | [Einordnung](agents.qmd#lernweg-für-data-analytics) | [Beispiele zum Buch](https://github.com/kirenz/google-adk-2/tree/main/examples) | Optional |
+| Thema | Materialien | Code | Arbeitsform |
+|---|---|---|---|
+| Agent konfigurieren und starten | [Ein erster Agent](agents.qmd) | [ADK-Labor](downloads/agents-lab.zip) | Selbststudium und Übung |
+| Python-Funktion als Werkzeug | [Ein eigenes Rechenwerkzeug](agents-tools.qmd) | Im ADK-Labor: `calculator_agent` | Präsenz und Übung |
+| Umsatzdatei abfragen und Ergebnisse prüfen | [Ein Agent für Datenanalysen](agents-data.qmd) | Im ADK-Labor: `analytics_agent` | Übung |
 
 ## GitHub-Übungsvorlagen
 
