@@ -8,18 +8,28 @@ Data Analytics verbindet eine fachliche Frage mit Daten, statistischen Methoden 
 
 Generative KI verändert, wie Analysen entstehen. Coding-Agenten können Code schreiben und Fehler suchen. Für die Auswahl der Daten, die Prüfung der Methoden und die Interpretation der Ergebnisse bleibt fachliches Verständnis erforderlich. Der Kurs verbindet deshalb die Arbeit mit KI mit nachvollziehbaren Analysen.
 
-## Aufbau
+## Online und Präsenz
 
-Am Anfang stehen die Fragestellung, das Studiendesign und die Bedeutung der Variablen. Darauf folgen die Untersuchung der Daten, Modelle und statistische Schlussfolgerungen. Data Storytelling verbindet die Ergebnisse mit der ursprünglichen Frage.
+Die folgende Übersicht zeigt die vorläufige Aufteilung für das Wintersemester 2026/27. Online bedeutet selbstständiges Arbeiten mit den verlinkten Kursen, Folien, Buchabschnitten und Notebooks. In Präsenz werden Beispiele gemeinsam entwickelt, Methoden erklärt und Ergebnisse diskutiert.
 
-- Daten und Studiendesign
-- Explorative Datenanalyse
-- Lineare Regression, Modellauswahl und Modellprüfung
-- Klassifikation und logistische Regression
-- Statistische Inferenz und Resampling
-- Wahrscheinlichkeit und Bayes
-- Data Storytelling
+| Thema | Online-Selbststudium | Präsenz |
+|---|---|---|
+| **KI und Arbeitsumgebung** | Vollständiger Kurs [Produktiv mit einem Agenten arbeiten](https://kirenz.github.io/agent-arbeitsumgebung/); [Python-Umgebung einrichten](programming-requirements.qmd) | Bedeutung von KI für die eigene Arbeit und Rolle; erste Analyseaufträge und fachliche Gegenprüfung |
+| **Fragestellung und Lifecycle** | Anwendungsfall auswählen, Problem eingrenzen, Variablen und Kennzahlen bestimmen | Datenbasierte Entscheidungen; Data-Science-Lifecycle; eine Fragestellung gemeinsam konkretisieren |
+| **Daten und Studiendesign** | Population und Stichprobe; Stichprobenverfahren; Experimente und Beobachtungsstudien | Erste Datenanalyse am Netflix-Beispiel; Fälle und Variablen; Konsequenzen des Studiendesigns |
+| **Kategoriale Daten** | Kreditdatensatz kennenlernen; Zeilen- und Spaltenanteile nacharbeiten; Kreisdiagramme | Kreuztabellen aus absoluten Häufigkeiten aufbauen; Bezugsgrößen erklären; einfache, gestapelte und standardisierte Balkendiagramme |
+| **Numerische Daten** | Streudiagramme, Dichtekurven, robuste Kennzahlen und Transformationen | Mittelwert und Median; Histogramm und Boxplot; Gruppen vergleichen; Varianz und Standardabweichung |
+| **Lineare Regression** | Regressionsgerade und Residuen; kleinste Quadrate; Ausreißer | Modellarten; Korrelation; Sales-Beispiel; R²; kategoriale und mehrere Prädiktoren |
+| **Modellprüfung und Klassifikation** | Trainings- und Testdaten; typische Modellprobleme; Vorhersagebeispiele; Wahrscheinlichkeit eines Ereignisses | Vorhersagen mit getrennten Daten prüfen; Klassifikation; Precision, Recall und F1; ROC und AUC; logistische Regression in Python |
+| **Statistische Inferenz** | Erklärte Beispiele und Notebooks zu Stichprobenstreuung, Konfidenzintervallen und Hypothesentests nacharbeiten | Zufallsschwankungen schrittweise untersuchen; Resampling; Unsicherheit und statistische Schlussfolgerungen |
+| **Wahrscheinlichkeit und Bayes** | Folien und Video zu bedingten Wahrscheinlichkeiten und Bayes | Offene Fragen anhand konkreter Beispiele klären |
+| **Prozesse und Coding-Agenten** | [BPMN-Grundlagen](bpmn.qmd) einschließlich Übungen und Selbstchecks; [Analyseaufträge mit Coding-Agenten](coding-agents.qmd) | Analyseprozess mit Rollen, Entscheidungen und Rückwegen modellieren; KI-generierte Berechnungen fachlich prüfen |
+| **Data Storytelling und Projekt** | [Data Storytelling](data-storytelling.qmd); eigene Analyse im [Teamprojekt](project-description.qmd) entwickeln und dokumentieren | Aussagen, Grafiken und Grenzen einer Analyse besprechen; Rückmeldung zu Fragestellung und Vorgehen |
 
-Die Prozessgestaltung begleitet diese Schritte. BPMN macht Aufgaben, Entscheidungen und Zuständigkeiten im Data-Science-Lifecycle sichtbar. Die Arbeit mit Coding-Agenten wird an den Stellen eingesetzt, an denen Daten untersucht, Code erstellt und Ergebnisse geprüft werden.
+## Übungen und Vertiefung
+
+Die [Pandas- und Modellübungen](course-materials.qmd#github-übungsvorlagen) begleiten die Themen. Dazu gehören Datenaufbereitung, explorative Analyse, Vorhersagen und Fehlermaße. Erste Schritte werden gemeinsam besprochen; die weitere Bearbeitung erfolgt selbstständig.
+
+Zusätzliche Vertiefungen umfassen Datenbeschaffung, das Survey-Labor, erweiterte Regressionsmodelle und Verfahren zur Modellauswahl. Die [Materialübersicht](course-materials.qmd) enthält die zugehörigen Folien, Buchabschnitte und Notebooks in der fachlichen Reihenfolge.
 
 Die [Kursbeschreibung](course-syllabus.qmd) erläutert die Inhalte und Arbeitsweise. Im [Projekt](project-description.qmd) werden die Methoden auf eine eigene Fragestellung angewendet.

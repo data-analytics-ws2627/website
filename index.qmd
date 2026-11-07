@@ -17,6 +17,8 @@ Im Mittelpunkt steht die Fähigkeit, eine Datenanalyse mit KI selbstständig zu 
 2. Die [Python-Umgebung und das Statistik-Labor einrichten](programming-requirements.qmd).
 3. Mit den [bestehenden Folien und Notebooks](course-materials.qmd) in die Datenanalyse einsteigen.
 
+Die [Kursübersicht](course-overview.qmd#online-und-präsenz) zeigt die Aufteilung auf Online-Selbststudium und Präsenz.
+
 ## Kursmaterialien
 
 Die Statistik folgt den Folien und *Introduction to Modern Statistics*: Fragestellung und Daten, Studiendesign, Exploration, Modelle und statistische Inferenz. Die Beispiele werden schrittweise entwickelt und anschließend in Python nachvollzogen.
