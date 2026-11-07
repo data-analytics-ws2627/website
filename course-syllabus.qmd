@@ -1,154 +1,54 @@
 ---
-title: "Syllabus"
+title: "Kursbeschreibung"
 ---
 
+## Inhalte
 
-## Course info
+Der Kurs behandelt die Erhebung, Aufbereitung und Analyse von Daten in Python. Beispiele und Übungen führen von einer konkreten Frage über die Untersuchung der Daten zu statistischen Schlussfolgerungen und Vorhersagemodellen.
 
-|                   | Day       | Time                  | Location    |
-|--        |--|-    |-|
-| Seminar          | 07.11.24   | 09:00  - 17:00    | [Room S203](https://horst.hdm-stuttgart.de/S203)  |
-| Seminar          | 08.11.24   | 09:00  - 17:00    |  [Room S203](https://horst.hdm-stuttgart.de/S203)  |
-| Online-Phase     | 09.11.24-15.01.25   |      |    |
-| Seminar          | 16.01.25   | 09:00  - 17:00    |  [Room S302](https://horst.hdm-stuttgart.de/S302)  |
+Die Themen bauen aufeinander auf:
 
-<br>
+1. **Daten und Studiendesign:** Beobachtungen, Variablen, Population und Stichprobe sowie die Unterscheidung von Beobachtungsstudien und Experimenten.
+2. **Explorative Datenanalyse:** Häufigkeiten, Anteile, Lage, Streuung und Zusammenhänge mit Tabellen und Grafiken untersuchen.
+3. **Regression und Klassifikation:** Modelle aufbauen, Koeffizienten interpretieren und Vorhersagen beurteilen.
+4. **Modellauswahl und Modellprüfung:** Trainings-, Validierungs- und Testdaten unterscheiden, Modelle mit einer Baseline vergleichen und Datenleckage erkennen.
+5. **Statistische Inferenz:** Stichprobenstreuung verstehen, Unsicherheit mit Resampling untersuchen und Hypothesen prüfen.
+6. **Wahrscheinlichkeit und Bayes:** Bedingte Wahrscheinlichkeiten unterscheiden und neue Informationen bei der Bewertung von Aussagen berücksichtigen.
+7. **Data Storytelling:** Eine Aussage mit passenden Grafiken, nachvollziehbaren Zahlen und ihren Grenzen vermitteln.
 
-- [Applied Statistics Moodle-Course](https://moodle.hdm-stuttgart.de/course/view.php?id=20529)
+Generative KI unterstützt die praktische Arbeit. Dazu gehören konkrete Analyseaufträge an Coding-Agenten, die Prüfung des erzeugten Codes und die unabhängige Kontrolle wichtiger Ergebnisse. BPMN beschreibt, wie diese Arbeitsschritte im Data-Science-Lifecycle zusammenhängen und wer Entscheidungen trifft.
 
-<br>
+## Arbeitsweise
 
+Die Beispiele werden schrittweise erklärt und anschließend in Python bearbeitet. Auf ein durchgerechnetes Beispiel folgt eine ähnliche Aufgabe, danach die Anwendung auf eigene Daten. Für die Übungen ist ein Laptop mit der [eingerichteten Arbeitsumgebung](programming-requirements.qmd) erforderlich.
 
-## Course topics
+Die Entscheidungsfolge lautet: Frage/Meinung → Plan (Problem, Kennzahl, Studiendesign) → Daten → Analyse → Report → Aktion → Evaluation. Die statistischen Methoden helfen dabei, einzelne Schritte dieser Folge zu begründen.
 
-Gain experience in data collection, exploratory data analysis, predictive modeling, statistical inference and Bayesian statistics while working on problems and case studies inspired by and based on real-world questions. 
+## Ergebnisse
 
-Topics we will cover:
+Im Verlauf des Kurses entstehen Analysen, die
 
-- Data & Study Design
-- Exploratory data analysis
-- Linear regression models
-- Model selection methods
-- Statistical inference
-- Probability and Bayes
-- Data Storytelling
-- Generative AI
+- Datenquellen, Variablen und Aufbereitungsschritte nachvollziehbar beschreiben,
+- Verteilungen und Zusammenhänge mit geeigneten Kennzahlen und Grafiken untersuchen,
+- Unsicherheit und die Grenzen statistischer Schlussfolgerungen erklären,
+- Regressions- und Klassifikationsmodelle mit geeigneten Vergleichsmaßstäben prüfen,
+- KI-generierten Code und daraus abgeleitete Aussagen anhand der Daten kontrollieren,
+- Ergebnisse in einem reproduzierbaren Bericht zusammenführen.
 
-The course will focus on the Python programming language.
+## Literatur
 
+Grundlage für die Statistik ist [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) von Mine Çetinkaya-Rundel und Johanna Hardin.
 
-## Learning objectives
+Für die Modellierung ergänzen folgende Bücher die Kursunterlagen:
 
-By the end of the semester, you will be able to...
+- [An Introduction to Statistical Learning with Applications in Python](https://www.statlearning.com/) von Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani und Jonathan Taylor.
+- [Feature Engineering and Selection: A Practical Approach for Predictive Models](https://www.feat.engineering/) von Max Kuhn und Kjell Johnson.
+- *Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow* von Aurélien Géron.
 
--   obtain, explore, visualize, and analyze data in Python to investigate patterns.
--   fit and evaluate regression and classification models to make predictions.
--   use resampling methods to obtain reliable predictions.
--   use statistical methods to test hypothesis.
--   apply Bayes' theorem, the foundation of Bayesian statistics. 
- 
+## Übungen, Prüfungen und Projekt
 
+Anwendungsübungen verbinden die erklärten Konzepte mit Python-Code. Die Aufgaben werden einzeln bearbeitet. Das [Teamprojekt](project-description.qmd) untersucht eine eigene datenbezogene Fragestellung und dokumentiert die Analyse reproduzierbar.
 
-## Where to get help
+Termine, Abgaben, Prüfungsform, zugelassene Hilfsmittel und Bewertung richten sich nach den Angaben im aktuellen [Moodle-Kurs](https://moodle.hdm-stuttgart.de/login/index.php). Das gilt auch für den zulässigen KI-Einsatz in Prüfungsleistungen.
 
-- If you have a question during lecture, feel free to ask it! 
-- Outside of class, any general questions about course content or assignments should be posted on the [Moodle course forum](https://moodle.hdm-stuttgart.de/mod/forum/view.php?id=303113).
-- Emails should be reserved for questions not appropriate for the public forum. **If you email me, please include the name of our course in the subject line.** 
-
-Check out the [Support](course-support.md) page for more resources.
-
-
-
-## Textbooks
-
-Main textbook for the course:
-
-- [Introduction to Modern Statistics (2024)](https://openintro-ims.netlify.app/) by Mine Çetinkaya-Rundel and Johanna Hardin.
-
-Optional:
-
-- [An Introduction to Statistical Learning with Applications in Python (2023)](https://www.statlearning.com/) by Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani and Jonathan Taylor.
-
-
-- [Feature Engineering and Selection: A Practical Approach for Predictive Models (2019)](http://www.feat.engineering/index.html) by Max Kuhn and Kjell Johnson
-
-
-- Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow (2022, 3rd Edition) by Aurélien Géron.
-
-
-
-## Lectures
-
-A lot of what you do in this course will involve writing code, and coding is a skill that is best learned by doing.
-Therefore, as much as possible, you will be working on a variety of tasks and activities throughout each lecture.
-
-You are expected to bring a laptop to each class so that you can take part in the in-class exercises.
-
-
-
-## Assessment
-
-Assessment for the course is comprised of these components: 
-
-- Application exercises 
-- Exams in Moodle
-- Project
-
-
-
-### Application exercises
-
-Parts of some lectures will be dedicated to working on "Application Exercises" (AE). These small exercises will be provided in GitHub Classroom and will give you an opportunity to apply the concepts and code introduced in the lectures.  
-
-AEs should be completed individually.
-
-
-### Exams in Moodle
-
-There will be multiple open-note exams in Moodle. Through these exams you have the opportunity to demonstrate what you've learned in the course thus far.
-
-
-:::{Note}
-The exams will focus on the conceptual understanding of the content
-:::
-
-More details about the exams will be given in the seminar.
-
-
-### Project
-
-The purpose of the [project](project-description.md) is to apply what you've learned throughout the semester to analyze an interesting, data-driven research question. The project will be completed in **teams**.
-
-More information about the project will be provided in the seminar.
-
-
-## Grading
-
-
-The final course grade will be calculated as follows:
-
-| Category              | Percentage      |
-|--|--|
-| Application exercises | 15             |
-| Exams                 | 35             |
-| Project               | 50             |
-
-The final grade will be determined based on the following thresholds:
-
-|  Grade       | Percentage |
-|--|--|
-| 1.0           | 96 - 100          |
-| 1.3           | 91 - 95           |
-| 1.7           | 85 - 90           |
-| 2.0           | 80 - 84           |
-| 2.3           | 75 - 79           |
-| 2.7           | 70 - 74           |
-| 3.0           | 65 - 69           |
-| 3.3           | 60 - 64           |
-| 3.7           | 55 - 59           |
-| 4.0            | 50 - 54          |
-| 4.7           | 15 - 49           |
-| 5.0            | 0 - 14           |
-
-
-
+Fragen zu Inhalten und Übungen gehören in die Vorlesung oder das Kursforum. Weitere Kontaktmöglichkeiten stehen unter [Unterstützung](course-support.qmd).

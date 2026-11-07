@@ -1,0 +1,43 @@
+---
+title: "Coding-Agenten für Analyseaufträge"
+---
+
+## Grundlagenkurs
+
+[Produktiv mit einem Agenten arbeiten](https://kirenz.github.io/agent-arbeitsumgebung/) bleibt ein vollständiger, eigenständiger Kurs am Anfang. Er behandelt Projektordner, erste Aufträge, AGENTS.md, Skills und MCP. Danach beginnt hier die Anwendung auf Datenanalysen.
+
+## Ein begrenzter Analyseauftrag
+
+Ein Coding-Agent kann Daten einlesen und Berechnungen ausführen. Die Wahl einer geeigneten Bezugsgröße und die Interpretation des Ergebnisses müssen fachlich geprüft werden. Beim Netflix-Beispiel ist der Anteil positiver Ergebnisse innerhalb jeder Gruppe relevant.
+
+Voraussetzung: Das Statistik-Labor ist entpackt und im Coding-Agenten geöffnet.
+
+1. Diesen Auftrag im Projektordner ausführen lassen.
+
+```text
+Kontext:
+Im Statistik-Labor liegt eda/netflix.csv. Die Datei enthält die Spalten group und outcome.
+
+Aufgabe:
+Prüfe zunächst die vorhandenen Werte und fehlende Einträge. Berechne danach pro Gruppe die Zahl der Fälle, die Zahl positiver Ergebnisse und deren Anteil. Ändere die Quelldatei nicht.
+
+Format:
+Erstelle ein Python-Notebook mit nachvollziehbaren Berechnungsschritten und einer Ergebnistabelle. Beschreibe die verwendeten Gruppen- und Ergebniswerte.
+
+Prüfung:
+Kontrolliere die Gesamtzahl von 2.000 Fällen und 1.000 Fällen pro Gruppe. Prüfe die Berechnung für eine Gruppe unabhängig. Beschreibe nur den beobachteten Unterschied; leite daraus noch keine statistische Signifikanz oder allgemeine Wirkung ab.
+```
+
+2. Die verwendeten Filter und Nenner im Notebook prüfen.
+3. Den Anteil einer Gruppe aus den absoluten Häufigkeiten nachrechnen.
+4. Abweichungen zwischen Tabelle, Code und Erklärung korrigieren lassen.
+
+Prüfkriterium: Die Gegenrechnung ergibt denselben Anteil wie das Notebook. Die Erklärung unterscheidet Beobachtung und statistische Schlussfolgerung.
+
+## Projektregeln
+
+Eine AGENTS.md hält fest, welche Daten verwendet werden dürfen und wie Ergebnisse geprüft werden. Im Statistik-Labor liegt bereits eine solche Datei. Neue Quellen, Paketänderungen und Änderungen an Rohdaten benötigen einen bewussten Umgang. Zugangsdaten und vertrauliche Daten gehören nicht in einen ungeprüften Auftrag.
+
+## Einordnung im Analyseprozess
+
+Die [BPMN-Beispiele](bpmn.qmd) zeigen, wo automatisierte Schritte und fachliche Prüfungen zusammenkommen. Ein erfolgreicher Programmlauf allein belegt weder eine geeignete Methode noch eine belastbare Empfehlung.

@@ -1,15 +1,33 @@
 project:
   type: website
+  render:
+    - index.qmd
+    - course-overview.qmd
+    - course-syllabus.qmd
+    - course-support.qmd
+    - course-materials.qmd
+    - programming-requirements.qmd
+    - bpmn.qmd
+    - coding-agents.qmd
+    - data-storytelling.qmd
+    - project-description.qmd
+    - project-tips-resources.qmd
+  resources:
+    - code-inputs.js
+    - downloads/*
+    - bpmn/**
+
+lang: de
 
 execute:
   freeze: auto
 
 website:
   page-navigation: true
-  title: "Data Analytics with Statistics"
-  description: "Homepage for Data Analytics with Statistics at HdM Stuttgart, WS 23/24."
-  site-url: "https://data-analytics-ws2425.github.io/website/"
-  repo-url: https://github.com/data-analytics-ws2425/website
+  title: "Data Analytics with Generative AI"
+  description: "Homepage for Data Analytics with Generative AI at HdM Stuttgart, WS 26/27."
+  site-url: "https://data-analytics-ws2627.github.io/website/"
+  repo-url: https://github.com/data-analytics-ws2627/website
   repo-actions: [edit, issue]
   open-graph: true
   image: "/images/logo.png"
@@ -18,11 +36,11 @@ website:
     type: overlay  
   page-footer:
     left: |
-      © [Jan Kirenz](https://www.kirenz.com/), 2024
+      © [Jan Kirenz](https://www.kirenz.com/), 2026
     center:
-      - text: "Schedule"
+      - text: "Kursstart"
         href: index.qmd
-      - text: "Syllabus"
+      - text: "Kursbeschreibung"
         href: course-syllabus.qmd  
     right:
       - icon: person-circle
@@ -39,43 +57,54 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/data-analytics-ws2425
+        href: https://github.com/data-analytics-ws2627
         text: "GitHub organization"
       - icon: person-fill
         text: "Moodle"
-        href: https://moodle.hdm-stuttgart.de/course/view.php?id=16202
+        href: https://moodle.hdm-stuttgart.de/login/index.php
 
     style: docked
     search: true
     collapse-level: 1
     contents:
-      - section: "Course information"
+      - section: "Kursinformationen"
         contents:
           - href: course-overview.qmd
-            text: Overview
+            text: Überblick
           - href: course-syllabus.qmd
-            text: Syllabus
+            text: Kursbeschreibung
           - href: course-support.qmd
-            text: Support
+            text: Unterstützung
           - href: index.qmd
-            text: Schedule
+            text: Kursstart
 
-      - section: "Programming"
+      - section: "Materialien"
+        contents:
+          - course-materials.qmd
+          - bpmn.qmd
+          - coding-agents.qmd
+          - data-storytelling.qmd
+
+      - section: "Einrichtung"
         contents:
           - href: programming-requirements.qmd
-            text: Requirements
+            text: Python-Umgebung
 #          - href: programming-troubleshooting.qmd
 #            text: Troubleshooting
-      - section: "Project"
+      - section: "Projekt"
         contents:
           - href: project-description.qmd
-            text: Description
+            text: Beschreibung
           - href: project-tips-resources.qmd
-            text: Tips + resources
+            text: Hinweise und Quellen
 
 
 format:
   html:
+    css: code-inputs.css
+    include-after-body:
+      - text: |
+          <script src="code-inputs.js"></script>
     toc: true
     theme:
       light: [cosmo, style/course.scss]

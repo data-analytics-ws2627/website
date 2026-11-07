@@ -1,1 +1,0 @@
-Sitemap: https://xyz.github.io/website/sitemap.xml

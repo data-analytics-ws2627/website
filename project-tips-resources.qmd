@@ -1,29 +1,36 @@
 ---
-title: "Project tips + resources"
+title: "Datenquellen"
 ---
 
-Some resources that may be helpful to find data:
+Ein geeigneter Datensatz enthält mehr als interessante Werte. Für die Analyse müssen die Beobachtungseinheit, die Bedeutung der Variablen und die Erhebung nachvollziehbar sein. Die [Projektbeschreibung](project-description.qmd#datenauswahl) nennt die fachlichen Anforderungen.
 
--   [Collection of Open Datasets](https://github.com/awesomedata/awesome-public-datasets)
--   [Open Government Data (D-A-CH-LI)](https://www.govdata.de)
--   [EU Open Data](https://data.europa.eu/euodp/en/home)
--   [Statistisches Bundesamt](https://www-genesis.destatis.de/genesis/online/data)
--   [Regionalstatistik](https://www.regionalstatistik.de/genesis/online/)
--   [Germany Zensus2011](https://www.zensus2011.de/DE/Home/Aktuelles/DemografischeGrunddaten.html?nn=559100)
--   [OECD](https://data.oecd.org)
--   [World Health Organization](https://www.who.int/gho/database/en/)
--   [The National Bureau of Economic Research](https://data.nber.org/data/)
--   [International Monetary Fund](https://data.imf.org/?sk=388DFA60-1D26-4ADE-B505-A05A558D9A42&sId=1479329328660)
--   [General Social Survey](http://gss.norc.org/)
--   [United Nations Data](http://data.un.org/)
--   [United Nations Statistics Division](https://unstats.un.org/home/)
--   [U.K. Data](https://data.gov.uk/)
--   [U.S. Data](https://www.data.gov/)
--   [U.S. Census Data](https://www.census.gov/data.html)
--   [European Statistics](https://ec.europa.eu/eurostat/)
--   [Statistics Canada](https://www.statcan.gc.ca/eng/start)
--   [Pew Research](https://www.pewresearch.org/download-datasets/)
--   [UNICEF](https://data.unicef.org/)
--   [CDC](https://www.cdc.gov/datastatistics/index.html)
--   [World Bank](https://datacatalog.worldbank.org/)
--   [Election Studies](https://electionstudies.org//)
+## Recherche
+
+Statistische Ämter und internationale Organisationen stellen Daten mit Beschreibungen zur Erhebung bereit:
+
+- [Statistisches Bundesamt: GENESIS-Online](https://www-genesis.destatis.de/genesis/online/)
+- [Regionalstatistik](https://www.regionalstatistik.de/genesis/online/)
+- [GovData](https://www.govdata.de/)
+- [Europäisches Datenportal](https://data.europa.eu/)
+- [Eurostat](https://ec.europa.eu/eurostat/)
+- [United Nations Data](https://data.un.org/)
+- [Weltbank: Datenkatalog](https://datacatalog.worldbank.org/)
+- [U.S. Census Bureau](https://www.census.gov/data.html)
+- [Statistics Canada](https://www.statcan.gc.ca/eng/start)
+- [General Social Survey](https://gss.norc.org/)
+- [Pew Research Center](https://www.pewresearch.org/download-datasets/)
+- [UNICEF](https://data.unicef.org/)
+
+Die [Sammlung öffentlicher Datensätze](https://github.com/awesomedata/awesome-public-datasets) bietet weitere Einstiegspunkte. Für die Analyse wird die ursprüngliche Datenquelle dokumentiert, nicht nur die Sammlung, über die sie gefunden wurde.
+
+## Erste Prüfung
+
+Vor der Auswahl werden Datenbeschreibung und Nutzungsbedingungen gelesen. Die folgenden Angaben gehören zur Dokumentation:
+
+1. Quelle und Abrufdatum festhalten.
+2. Beobachtungseinheit und Erhebungszeitraum bestimmen.
+3. Bedeutung und Einheit der benötigten Variablen prüfen.
+4. Fehlende Werte, Auswahlverfahren und mögliche Verzerrungen untersuchen.
+5. Zulässige Nutzung und Weitergabe der Daten klären.
+
+Prüfkriterium: Die Forschungsfrage lässt sich mit den vorhandenen Variablen untersuchen, und die Grenzen der Daten sind beschrieben.

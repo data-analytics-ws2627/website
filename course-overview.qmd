@@ -1,19 +1,25 @@
 ---
-title: "Course overview"
+title: "Überblick"
 ---
 
 ![](/images/logo.png){width="50%"}
 
-In this course you will gain experience in data wrangling, exploratory data analysis, predictive modeling and effective communication of results.
+Data Analytics verbindet eine fachliche Frage mit Daten, statistischen Methoden und einer begründeten Entscheidung. Der Kurs behandelt Datenaufbereitung, explorative Datenanalyse, statistische Inferenz, Vorhersagemodelle und die verständliche Darstellung von Ergebnissen in Python.
 
-We will cover the following topics:
+Generative KI verändert, wie Analysen entstehen. Coding-Agenten können Code schreiben und Fehler suchen. Für die Auswahl der Daten, die Prüfung der Methoden und die Interpretation der Ergebnisse bleibt fachliches Verständnis erforderlich. Der Kurs verbindet deshalb die Arbeit mit KI mit nachvollziehbaren Analysen.
 
-- Data & Study Design
-- Exploratory data analysis
-- Linear regression models
-- Model selection methods
-- Classification and logistic regression
-- Statistical inference
-- Probability and Bayes
+## Aufbau
+
+Am Anfang stehen die Fragestellung, das Studiendesign und die Bedeutung der Variablen. Darauf folgen die Untersuchung der Daten, Modelle und statistische Schlussfolgerungen. Data Storytelling verbindet die Ergebnisse mit der ursprünglichen Frage.
+
+- Daten und Studiendesign
+- Explorative Datenanalyse
+- Lineare Regression, Modellauswahl und Modellprüfung
+- Klassifikation und logistische Regression
+- Statistische Inferenz und Resampling
+- Wahrscheinlichkeit und Bayes
 - Data Storytelling
-- Generative AI
+
+Die Prozessgestaltung begleitet diese Schritte. BPMN macht Aufgaben, Entscheidungen und Zuständigkeiten im Data-Science-Lifecycle sichtbar. Die Arbeit mit Coding-Agenten wird an den Stellen eingesetzt, an denen Daten untersucht, Code erstellt und Ergebnisse geprüft werden.
+
+Die [Kursbeschreibung](course-syllabus.qmd) erläutert die Inhalte und Arbeitsweise. Im [Projekt](project-description.qmd) werden die Methoden auf eine eigene Fragestellung angewendet.

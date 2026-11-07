@@ -1,0 +1,154 @@
+---
+title: "Statistik: Folien und Notebooks"
+---
+
+Die Materialien folgen der bisherigen Erklärfolge. Zu jedem Thema stehen die zugehörigen Folien, Buchabschnitte und Python-Beispiele zusammen.
+
+[Introduction to Modern Statistics](https://openintro-ims.netlify.app/) bildet die Grundlage. Die englischen Titel entsprechen den Originalfolien.
+
+
+## Introduction
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| Data driven decision making |  | [Folien](https://docs.google.com/presentation/d/1AfzqhjEAfJ5X4Q8YC9GK14jEBfdDXEIRmXonriwYHNY/export/pdf) |  |
+| Data Science Lifecycle Overview |  | [Folien](https://docs.google.com/presentation/d/1LR0LmvKFycE3MIjfDEp6L_bGdJtCOe60rFycWIYayBI/export/pdf) |  |
+| Use case identification |  | [Folien](https://docs.google.com/presentation/d/1RT7IhYgLgNJ8RiT28sMr8Mfyk5y_e-rfYg3jRsPKGEA/export/pdf) |  |
+| Frame the Problem |  | [Folien](https://docs.google.com/presentation/d/12WRK3EgiHOHz2vsJnYxIxNvDQmjTMax1iTSqsjVr7JY/export/pdf) |  |
+| Identify Variables |  | [Folien](https://docs.google.com/presentation/d/1VqXuDX_3VFNOGMw3y3uQmvFr2m7b6BlW3if_icQSstM/export/pdf) |  |
+| Define Metrics |  | [Folien](https://docs.google.com/presentation/d/1vlVqqU4Frt8y_GaCs4qVx7EVPyNravGhpgkV6tGeYmY/export/pdf) |  |
+
+## Data
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| First Data Analysis | [Buch](https://openintro-ims.netlify.app/data-hello.html#case-study-stents-strokes) | [Folien](https://docs.google.com/presentation/d/1YXoCWZv37c3u_cMBc3o2_IG_atDlGdLhCwin_Rciwck/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ae/1_netflix.ipynb) |
+| Data basics | [Buch](https://openintro-ims.netlify.app/data-hello.html#data-basics) | [Folien](https://docs.google.com/presentation/d/1IlR_HTTNE865xiT3GlXD5_RNZDMMtlbNKRftLXPPmsw/export/pdf) |  |
+| How to obtain data (Vertiefung) |  | [Folien](https://docs.google.com/presentation/d/1zldRDAOqmjoJmY_D4-ZkWfhwaklt-UfAPKH4G5kmFVY/export/pdf) |  |
+| Data wrangling: Pandas lab | [Buch](https://pandas.pydata.org/docs/) | [Labor](https://kirenz.github.io/lab-pandas-intro) |  |
+| Data analysis: Survey lab (Vertiefung) |  | [Labor](https://kirenz.github.io/lab-survey) |  |
+
+## Study Design
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| Population and sample | [Buch](https://openintro-ims.netlify.app/data-design.html#data-design) | [Folien](https://docs.google.com/presentation/d/1QPdxp5sFumf9zee-WypsuzSkY7n_hvkhFsdJkRF3-pw/export/pdf) |  |
+| Sampling methods | [Buch](https://openintro-ims.netlify.app/data-design.html#sampling-principles-strategies) | [Folien](https://docs.google.com/presentation/d/1Rby9NR9F8pu1xHka0Xt1vvbH-oDRfrFC-bwb49IbhA8/export/pdf) |  |
+| Experiments | [Buch](https://openintro-ims.netlify.app/data-design.html#experiments) | [Folien](https://docs.google.com/presentation/d/1FTNBLYBCId2qsL1sMJf3qgBtaFH3hpbUm8lPck5BaTQ/export/pdf) |  |
+| Observations | [Buch](https://openintro-ims.netlify.app/data-design.html#observational-studies) | [Folien](https://docs.google.com/presentation/d/1Oz5T_nuO1UFcjbliFmsEQWxG1dKJHDPPNWDeTvukxbE/export/pdf) |  |
+
+## EDA with categorical data
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| Loans data | [Buch](https://openintro-ims.netlify.app/explore-categorical.html#explore-categorical) | [Folien](https://docs.google.com/presentation/d/1o0TVpTvndPA1J23CdTtEThYSekjudkGXuW9HiEA65yc/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/04-1-data-overview.ipynb) |
+| Contingency tables | [Buch](https://openintro-ims.netlify.app/explore-categorical.html#contingency-tables-and-bar-plots) | [Folien](https://docs.google.com/presentation/d/1xIfx5wWjSi2ciGDo3OcYmjOYWzQZ5jWC-UwqioKKO6k/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/04-1-contingency-table.ipynb) |
+| Contingency tables with proportions | [Buch](https://openintro-ims.netlify.app/explore-categorical.html#row-and-column-proportions) | [Folien](https://docs.google.com/presentation/d/1fY1jRrnluZg9MDei9hcdtCRmRXlUqCg6lonQVzkItPQ/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/04-3-row-column-proportions.ipynb) |
+| Simple bar chart | [Buch](https://openintro-ims.netlify.app/explore-categorical.html#contingency-tables-and-bar-plots) | [Folien](https://docs.google.com/presentation/d/1RpYvnIxE5QCK3-urCa76CHUvDqOKlFb7TdAn6XgYjew/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/04-1-bar-chart-altair.ipynb) |
+| Stacked bar plot | [Buch](https://openintro-ims.netlify.app/explore-categorical.html#bar-plots-with-two-variables) | [Folien](https://docs.google.com/presentation/d/1TU5pqJqfgzcBRitDtSxjdRPhwl2TM9Rt3u3FHTPT020/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/04-2-stacked-bar-chart-altair.ipynb) |
+| Standardized bar plot | [Buch](https://openintro-ims.netlify.app/explore-categorical.html#bar-plots-with-two-variables) | [Folien](https://docs.google.com/presentation/d/1BV7XwkZLfTMe5acsDomL3pcSsNhatpswRa11XuzNuLQ/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/04-2-standardized-bar-chart-altair.ipynb) |
+| Pie chart | [Buch](https://openintro-ims.netlify.app/explore-categorical.html#pie-charts) | [Folien](https://docs.google.com/presentation/d/1Ks3jugleTrpLHwI0CDcPl2P7Uvj5z-iR35iTKJeNGxY/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/04-4-pie-charts-altair.ipynb) |
+
+## EDA with numerical data
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| Scatterplot | [Buch](https://openintro-ims.netlify.app/explore-numerical.html#scatterplots) | [Folien](https://docs.google.com/presentation/d/1K13NYtk-fXgIZCszUWkSN1FWqLPf8Ey8U7l9YZSQDtU/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/05-1-scatterplot-paired-data-altair.ipynb) |
+| Dot plot mean median and mode | [Buch](https://openintro-ims.netlify.app/explore-numerical.html#dotplots) | [Folien](https://docs.google.com/presentation/d/1x0gxZ063LQOHHvvTdwP_086HPfl3Ul2PuzGDZFLXzI0/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/05-2-dot-plots-mean-altair.ipynb) |
+| Histogram | [Buch](https://openintro-ims.netlify.app/explore-numerical.html#histograms) | [Folien](https://docs.google.com/presentation/d/1tpbG5V28sIVdLuE_oIWzz59tRMRNL8baXu2xHzE4Hb4/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/05-3-histograms-altair.ipynb) |
+| Box Plot | [Buch](https://openintro-ims.netlify.app/explore-numerical.html#boxplots) | [Folien](https://docs.google.com/presentation/d/1VqT9rAbE_1zfhLrWNiQRiOjiJ0-pSjN1T0DM_BMAl_A/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/05-5-box-plot-altair.ipynb) |
+| Comparing numerical data across groups | [Buch](https://openintro-ims.netlify.app/explore-categorical.html#comparing-numerical-data-across-groups) | [Folien](https://docs.google.com/presentation/d/1yWzxDmaSVwygOQoAuRdYLq_32lIe_utHlaOWW5f63jk/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/04-6-comparisons-across-groups-altair.ipynb) |
+| Variance and standard deviation | [Buch](https://openintro-ims.netlify.app/explore-numerical.html#histograms) | [Folien](https://docs.google.com/presentation/d/1bsu5VJyS1LMFM3N6oh66dQ-Qf3DWiqRMPvasIbRqpLU/export/pdf) |  |
+| Kernel density plot | [Buch](https://openintro-ims.netlify.app/explore-numerical.html#histograms) |  | [Notebook](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/05-3-histograms-kernel-density-altair.ipynb) |
+| Robust statistics and transformations | [Buch](https://openintro-ims.netlify.app/explore-numerical.html#robust-statistics) | [Folien](https://docs.google.com/presentation/d/16Oy2-hXJgTd4IUjYSj6ZN0gBimS_Oe5OSpe7B6I91qg/export/pdf) |  |
+
+## Models
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| Statistical Learning, Machine Learning |  | [Folien](https://docs.google.com/presentation/d/1P3MkbJseVwLggUP_lGoNoZ3mk4_nOOBFZ6GmVzvBCzM/export/pdf) |  |
+| Types of Models |  | [Folien](https://docs.google.com/presentation/d/1ZycVKQLPSHGUv3Mga1CE3BHTL0W_gfszs6SkEh7fzeU/export/pdf) |  |
+
+## Linear Regression models
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| Correlation | [Buch](https://openintro-ims.netlify.app/model-slr.html#describing-linear-relationships-with-correlation) | [Folien](https://docs.google.com/presentation/d/1JyvtQBRiUhjncLki3ozy4SvvgwRqS7Gmj_vUpFokzzo/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/07-2-correlation.ipynb) |
+| Sales and ads |  | [Folien](https://docs.google.com/presentation/d/1q9o_PycjwItr-5PxotZFFzkwdqvo8fVskv_Y0H1CbxE/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-models/blob/main/ae/1_intro_sales.ipynb) |
+| Mean squared error |  | [Folien](https://docs.google.com/presentation/d/1DnX0RnGCguOE2elQJFrcu2efZp6hjre7fsTrAfBJQTA/export/pdf) |  |
+| Fitting a line and residuals | [Buch](https://openintro-ims.netlify.app/model-slr.html#fit-line-res-cor) | [Folien](https://docs.google.com/presentation/d/18xWbx5rkptYfOaqzpfIc7RD-LC9Y-Wgs_7tz9Z2a2hg/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/07-1-fitting.ipynb) |
+| Least squares regression | [Buch](https://openintro-ims.netlify.app/model-slr.html#least-squares-regression) | [Folien](https://docs.google.com/presentation/d/1jreIuC0fOiVPHt6CUNYb-Kb4uKogCeftBZP5Zum6jSQ/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/07-3-least-squares.ipynb) |
+| R squared | [Buch](https://openintro-ims.netlify.app/model-slr.html#r-squared) | [Folien](https://docs.google.com/presentation/d/1ZIijR7F877M9peDH2rhb3IO7dP6JGDd1ypz_C2pAyGI/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/07-4-strength-fit.ipynb) |
+| Categorical predictors with two levels | [Buch](https://openintro-ims.netlify.app/model-slr.html#categorical-predictor-two-levels) | [Folien](https://docs.google.com/presentation/d/1Ca1pslYtl_bsPgY00JMhseV4klnU81AWw6s5Y8a15PA/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/07-5-categorical.ipynb) |
+| Outliers | [Buch](https://openintro-ims.netlify.app/model-slr.html#outliers-in-regression) | [Folien](https://docs.google.com/presentation/d/1UxbXpM0_BtZu9nAUczUopOOGT39hzn9Ucz0jOTYmM_Y/export/pdf) |  |
+| Multiple predictors regression 1 | [Buch](https://openintro-ims.netlify.app/model-mlr.html#model-mlr) | [Folien](https://docs.google.com/presentation/d/1ijhtWW58Kx1-ltulPSc1dKotJrXS7ZTGi6RFCKOGStA/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/08a-1-multiple.ipynb) |
+| Multiple predictors regression 2 |  |  | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/08a-2-multiple.ipynb) |
+| Multiple predictors regression 3 |  |  | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/08a-3-multiple.ipynb) |
+
+## Linear Regression with Data Splitting
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| Regression example happier |  | [Folien](https://docs.google.com/presentation/d/1ZrzKUPZqp7GlCAh4uFpXnvUW6kQTvUgD2G-YZ7B24aM/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-models/blob/main/mr/happier-c.ipynb) |
+| Main model challenges |  | [Folien](https://docs.google.com/presentation/d/1WPUVfUe4rZu1bt61IwjneHqldhH9nC6U0F_u7Mj_ZL4/export/pdf) |  |
+| Data splitting |  | [Folien](https://docs.google.com/presentation/d/16DAGzUTUzI_prncqDeZx2HhpNnM_xTOL_Na0xTaDeVk/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-models/blob/main/mr/happier-splitting-c.ipynb) |
+| Sales prediction |  | [Folien](https://docs.google.com/presentation/d/1CQUpb2fwezmni-GUeTsbxkE9ZekKK69eAzqKEdUBAm8/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/08c-1-sales.ipynb) |
+| Sales prediction with data splitting |  |  | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/08c-2-sales.ipynb) |
+
+## Advanced Linear Regression models
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| Regression splines (Vertiefung) | [Buch](https://www.statlearning.com/) |  | [Notebook](https://colab.research.google.com/github/kirenz/notebooks/blob/main/ims/copy/99-1-splines.ipynb) |
+| Generalized additive models (Vertiefung) | [Buch](https://www.statlearning.com/) |  | [Notebook](https://colab.research.google.com/github/kirenz/notebooks/blob/main/ims/copy/99-1-gam.ipynb) |
+| Adjusted R squared (Vertiefung) | [Buch](https://openintro-ims.netlify.app/model-mlr.html#adjusted-r-squared) | [Folien](https://docs.google.com/presentation/d/17l_8tVrVxyZRBZylkHa4J4ACCgp43gIqVgBQ5tuB9KM/export/pdf) |  |
+| Regression diagnostics (Vertiefung) |  |  | [Notebook](https://colab.research.google.com/github/kirenz/notebooks/blob/main/ims/copy/99-1-diagnostics.ipynb) |
+
+## Model Selection Methods
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| Model selection methods (Vertiefung) | [Buch](http://www.feat.engineering/selection.html) | [Folien](https://docs.google.com/presentation/d/1nosMLlMYxQ6gMw9betZ9AL6z8sHGqM7s9jL-Mf0VnXo/export/pdf) |  |
+| Implicit model selection (Vertiefung) | [Buch](https://www.statlearning.com/) |  | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/08d-1-implicit.ipynb) |
+| Lasso regression (Vertiefung) | [Buch](https://www.statlearning.com/) |  | [Notebook](https://colab.research.google.com/github/kirenz/notebooks/blob/main/ims/copy/99-1-lasso-c.ipynb) |
+| Filter model selection (Vertiefung) | [Buch](http://www.feat.engineering/selection.html) |  | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/08d-2-filter.ipynb) |
+| Wrapper model selection (Vertiefung) | [Buch](http://www.feat.engineering/selection.html) |  | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/08d-3-wrapper.ipynb) |
+
+## Classification models
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| Classification |  | [Folien](https://docs.google.com/presentation/d/1Uait12xIaTM9rdyxSEnzIbR8opENnoOOPefuPocze3s/export/pdf) |  |
+| Precision recall and F1 score | [Buch](https://mlu-explain.github.io/precision-recall/) | [Folien](https://docs.google.com/presentation/d/1X3_Ju8egEA8GwH_r76rxHHoC7tvHt8tMWXyT9WKfUko/export/pdf) |  |
+| ROC Curve and AUC | [Buch](https://mlu-explain.github.io/roc-auc/) | [Folien](https://docs.google.com/presentation/d/1wapuNTe4wVBUZVmH_X6-OxZlWkQL_YkhHsqZttQUWZk/export/pdf) |  |
+| Probability of an event | [Buch](https://openintro-ims.netlify.app/model-logistic.html#modelingTheProbabilityOfAnEvent) | [Folien](https://docs.google.com/presentation/d/1VeNM1TK6XXquHEmVNNUmzXOvdgqDFGVilN310Z6JKeg/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/09a-logistic-c.ipynb) |
+| Logistic regression in Python |  |  | [Notebook](https://colab.research.google.com/github/kirenz/notebooks/blob/main/ims/copy/99-1-logistic-online.ipynb) |
+
+## Statistical Inference
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| introduction (Vertiefung) | [Buch](https://openintro-ims.netlify.app/foundations-mathematical.html) | [Folien](https://docs.google.com/presentation/d/16CnOWEpi1E7ThpWlEJ4CaSNFmqRfFM322lUXXwFmKeQ/export/pdf) | [Notebook](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/13a-mathematical-c.ipynb) |
+| Cases and confidence (Vertiefung) | [Buch](https://openintro-ims.netlify.app/foundations-mathematical.html#caseopp) | [Folien](https://docs.google.com/presentation/d/1q-m2yp2zFZW3plabPVkDbUQxypoiUujbk4rmA4K_kHw/export/pdf) |  |
+| Decision errors (Vertiefung) | [Buch](https://openintro-ims.netlify.app/decerr.html) | [Folien](https://docs.google.com/presentation/d/1ei-Tt6pqpPl_5oiMDMA9Coavf3ksCauxsJx2oK4U6L0/export/pdf) |  |
+| Single proportion (Vertiefung) | [Buch](https://openintro-ims.netlify.app/inference-one-prop.html#one-prop-norm) | [Folien](https://docs.google.com/presentation/d/120AeFtpSKdjaDM9JFoM4d0_hDvgtWrl5DQTncSHISIU/export/pdf) |  |
+| Single proportion hypothesis testing (Vertiefung) | [Buch](https://openintro-ims.netlify.app/inference-one-prop.html#hypothesis-test-for-a-proportion) | [Folien](https://docs.google.com/presentation/d/1703wnVRF9MEDzDuhIT6P94UJoPwvnXuoK6XLIkXz9mg/export/pdf) |  |
+| Two proportions (Vertiefung) | [Buch](https://openintro-ims.netlify.app/inference-two-props.html#math-2prop) | [Folien](https://docs.google.com/presentation/d/1wxIcHV_tEoXnKcQg21s1-Hte85VQ3VN-qGkwzmGdNWc/export/pdf) |  |
+| Two proportions hypothesis test (Vertiefung) | [Buch](https://openintro-ims.netlify.app/inference-two-props.html#hypothesis-test-for-the-difference-between-two-proportions) | [Folien](https://docs.google.com/presentation/d/1RAr_RnYry-a1FRsNIwVzB-vkycAsRD6etitSoV4N1a0/export/pdf) |  |
+| Two proportions mammogram (Vertiefung) | [Buch](https://openintro-ims.netlify.app/inference-two-props.html#hypothesis-test-for-the-difference-between-two-proportions) | [Folien](https://docs.google.com/presentation/d/1ER-IJvtNJPHOY4bQGurpqAl83rexJwQ0Db2ujo8eLAE/export/pdf) |  |
+| Two way tables (Vertiefung) | [Buch](https://openintro-ims.netlify.app/inference-tables.html#mathchisq) | [Folien](https://docs.google.com/presentation/d/19svJFkfUojZ4uqkh9ErsPXSV1gILew9bRIs8gi8rcZs/export/pdf) |  |
+| Two means (Vertiefung) | [Buch](https://openintro-ims.netlify.app/inference-two-means.html#mathematical-model-for-estimating-the-difference-in-means) | [Folien](https://docs.google.com/presentation/d/12prlVzGJC9OndtHSYCExnrZVzUBzXQ3Kh0tSWE7pCNs/export/pdf) |  |
+| Inference regression (Vertiefung) | [Buch](https://openintro-ims.netlify.app/inf-model-slr.html#mathematical-model-interval-for-the-slope) | [Folien](https://docs.google.com/presentation/d/18aJ5UJYxk3cphMOU_piKMdeJHUpy3vwkZmJ7CFlmJsY/export/pdf) |  |
+
+## Probability and Bayes
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| Probability and Bayes | [📺](https://www.youtube.com/watch?v=HZGCoVF3YvM) | [Folien](https://docs.google.com/presentation/d/1dJ1b2iaWS9-tUO0AKLpjDJbohNtG4in1CCyQimPhXP0/export/pdf) |  |
+
+## Optional content
+
+| Thema | Buch | Folien | Python |
+|---|---|---|---|
+| Data storytelling (Vertiefung) |  | [Materialien](data-storytelling.qmd) |  |
+| Generative AI (Vertiefung) |  | [Coding-Agenten](coding-agents.qmd) |  |

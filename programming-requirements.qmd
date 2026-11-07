@@ -1,12 +1,72 @@
 ---
-title: "Requirements"
+title: "Python-Umgebung einrichten"
 ---
 
-For this course you will need the following setup:
+Das Statistik-Labor enthält die Daten und Notebooks für Exploration, Inferenz und Modelle. uv richtet dafür eine Python-Umgebung mit den festgelegten Paketversionen ein. Jupyter Lab öffnet die Notebooks im Browser.
 
-- **Python**: Anaconda, Anaconda Environment `analytics` and Visual Studio Code
-- **GitHub**: Personal account and a GitHub Organization for your team
+## uv installieren
 
-:::{.callout-important}
-Visit the "[Programming Toolkit-webpage](https://kirenz.github.io/lab-toolkit/)" to learn how to meet all requirements.
-:::
+1. uv nach der [Installationsanleitung für macOS und Windows](https://github.com/kirenz/uv-setup#installing-uv) installieren.
+2. Ein neues Terminal öffnen.
+3. Die Installation prüfen:
+
+```bash
+uv --version
+```
+
+**Prüfkriterium:** Die Ausgabe zeigt eine Versionsnummer.
+
+## Statistik-Labor vorbereiten
+
+1. Das [Statistik-Labor herunterladen](downloads/statistik-lab.zip).
+2. Die ZIP-Datei entpacken.
+3. Den Ordner öffnen, der `pyproject.toml` und `uv.lock` enthält.
+
+Die folgenden Befehle werden im Terminal ausgeführt. macOS verwendet das Terminal; unter Windows eignen sich Git Bash oder PowerShell.
+
+## In den Projektordner wechseln
+
+1. Die verwendete Shell auswählen.
+2. Den vollständigen Ordnerpfad ohne zusätzliche Anführungszeichen eingeben.
+3. Den erzeugten Befehl kopieren und im Terminal ausführen.
+
+```{=html}
+<div class="code-input" data-path-command>
+  <label for="lab-shell">Shell</label>
+  <select id="lab-shell" data-shell>
+    <option value="bash">macOS, Linux oder Git Bash</option>
+    <option value="powershell">PowerShell unter Windows</option>
+  </select>
+  <label for="lab-path">Vollständiger Ordnerpfad</label>
+  <input id="lab-path" data-path type="text" autocomplete="off" spellcheck="false" aria-describedby="lab-path-hint">
+  <p id="lab-path-hint" class="code-input-hint">Den Pfad zum Ordner mit pyproject.toml und uv.lock eingeben. Bei Git Bash den Pfad in Git-Bash-Schreibweise verwenden, etwa /c/Users/Name/Statistik-Labor.</p>
+  <div class="code-input-header">
+    <span data-language>Bash</span>
+    <button type="button" data-copy disabled>Kopieren</button>
+  </div>
+  <pre><code data-command>cd -- [Vollständiger Ordnerpfad]</code></pre>
+  <p data-status role="status" aria-live="polite">Zuerst den Ordnerpfad eingeben.</p>
+  <noscript>Für die automatische Anpassung des Befehls muss JavaScript aktiviert sein.</noscript>
+</div>
+```
+
+## Umgebung und Notebook starten
+
+Voraussetzung: Das Terminal befindet sich im Ordner mit `pyproject.toml` und `uv.lock`.
+
+1. Die Python-Umgebung einrichten:
+
+```bash
+uv sync --locked
+```
+
+2. Jupyter Lab starten:
+
+```bash
+uv run --locked jupyter lab
+```
+
+3. Im Browser `eda/eda-netflix-loans.ipynb` öffnen.
+4. Die Einrichtungs- und Einlesezellen am Anfang ausführen.
+
+**Prüfkriterium:** Die Daten werden ohne Fehlermeldung geladen. Die Netflix-Tabelle enthält 2.000 Zeilen.

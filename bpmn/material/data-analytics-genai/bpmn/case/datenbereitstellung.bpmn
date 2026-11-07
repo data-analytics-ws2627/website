@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Synthetischer Übungsfall des Data-Analytics-Kurses. Fachliches Modell, nicht ausführbar. Getrennte Detailmodelle erläutern die zugeklappten Teilprozesse. -->
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_datenbereitstellung" targetNamespace="http://kirenz.de/data-analytics-genai" exporter="process-lab" exporterVersion="0.1">
+  <bpmn:collaboration id="Collab_datenbereitstellung">
+    <bpmn:participant id="Auftraggeber" name="Auftraggeber" />
+    <bpmn:participant id="Analyse" name="Analyseservice" processRef="Process_Analyse" />
+    <bpmn:messageFlow id="M1" name="Fehlerliste und Korrekturanforderung" sourceRef="Anfordern" targetRef="Auftraggeber" />
+    <bpmn:messageFlow id="M2" name="Vollständiges Ersatzpaket" sourceRef="Auftraggeber" targetRef="Paket" />
+    <bpmn:messageFlow id="M3" name="Schließungsmitteilung" sourceRef="Schliessen" targetRef="Auftraggeber" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_Analyse" name="Datenpaket prüfen und beschaffen" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_datenbereitstellung">
+      <bpmn:lane id="A" name="Analystin oder Analyst">
+        <bpmn:flowNodeRef>Start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Anfordern</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Warten</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Paket</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Frist</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Schliessen</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Ende</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="S" name="Analysesystem">
+        <bpmn:flowNodeRef>Pruefen</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>OK</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Fertig</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Start" name="Datenpaket übernommen">
+      <bpmn:outgoing>F1</bpmn:outgoing>
+
+    </bpmn:startEvent>
+    <bpmn:subProcess id="Pruefen" name="Datei technisch prüfen">
+      <bpmn:documentation>Eine Instanz je Datei; genau drei Dateien. Alle Instanzen müssen enden. Detail: dateipruefung.bpmn.</bpmn:documentation>
+      <bpmn:incoming>F1</bpmn:incoming>
+      <bpmn:incoming>F8</bpmn:incoming>
+      <bpmn:outgoing>F2</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics><bpmn:loopCardinality>3</bpmn:loopCardinality></bpmn:multiInstanceLoopCharacteristics>
+      <bpmn:dataOutputAssociation id="A1"><bpmn:targetRef>Vermerke</bpmn:targetRef></bpmn:dataOutputAssociation>
+    </bpmn:subProcess>
+    <bpmn:exclusiveGateway id="OK" name="Alle Dateien verwendbar?">
+      <bpmn:incoming>F2</bpmn:incoming>
+      <bpmn:outgoing>F3</bpmn:outgoing>
+      <bpmn:outgoing>F4</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="Fertig" name="Daten vorhanden">
+      <bpmn:incoming>F3</bpmn:incoming>
+
+    </bpmn:endEvent>
+    <bpmn:sendTask id="Anfordern" name="Korrekturpaket anfordern">
+      <bpmn:documentation>Korrekturpaket anfordern. Synthetischer Übungsfall; Durchführung gemäß Fallbeschreibung, keine produktive Automatisierung.</bpmn:documentation>
+      <bpmn:incoming>F4</bpmn:incoming>
+      <bpmn:outgoing>F5</bpmn:outgoing>
+
+    </bpmn:sendTask>
+    <bpmn:eventBasedGateway id="Warten">
+      <bpmn:incoming>F5</bpmn:incoming>
+      <bpmn:outgoing>F6</bpmn:outgoing>
+      <bpmn:outgoing>F7</bpmn:outgoing>
+    </bpmn:eventBasedGateway>
+    <bpmn:intermediateCatchEvent id="Paket" name="Ersatzpaket eingegangen">
+      <bpmn:incoming>F6</bpmn:incoming>
+      <bpmn:outgoing>F8</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:intermediateCatchEvent>
+    <bpmn:intermediateCatchEvent id="Frist" name="5 Kalendertage verstrichen">
+      <bpmn:incoming>F7</bpmn:incoming>
+      <bpmn:outgoing>F9</bpmn:outgoing>
+      <bpmn:timerEventDefinition><bpmn:timeDuration>P5D</bpmn:timeDuration></bpmn:timerEventDefinition>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:sendTask id="Schliessen" name="Schließung mitteilen">
+      <bpmn:documentation>Schließung mitteilen. Synthetischer Übungsfall; Durchführung gemäß Fallbeschreibung, keine produktive Automatisierung.</bpmn:documentation>
+      <bpmn:incoming>F9</bpmn:incoming>
+      <bpmn:outgoing>F10</bpmn:outgoing>
+
+    </bpmn:sendTask>
+    <bpmn:endEvent id="Ende" name="Auftrag ohne Daten geschlossen">
+      <bpmn:incoming>F10</bpmn:incoming>
+
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="F1" sourceRef="Start" targetRef="Pruefen" />
+    <bpmn:sequenceFlow id="F2" sourceRef="Pruefen" targetRef="OK" />
+    <bpmn:sequenceFlow id="F3" name="ja" sourceRef="OK" targetRef="Fertig" />
+    <bpmn:sequenceFlow id="F4" name="nein" sourceRef="OK" targetRef="Anfordern" />
+    <bpmn:sequenceFlow id="F5" sourceRef="Anfordern" targetRef="Warten" />
+    <bpmn:sequenceFlow id="F6" sourceRef="Warten" targetRef="Paket" />
+    <bpmn:sequenceFlow id="F7" sourceRef="Warten" targetRef="Frist" />
+    <bpmn:sequenceFlow id="F8" sourceRef="Paket" targetRef="Pruefen" />
+    <bpmn:sequenceFlow id="F9" sourceRef="Frist" targetRef="Schliessen" />
+    <bpmn:sequenceFlow id="F10" sourceRef="Schliessen" targetRef="Ende" />
+    <bpmn:dataObjectReference id="Vermerke" name="Drei Prüfvermerke" dataObjectRef="DO_Vermerke" />
+    <bpmn:dataObject id="DO_Vermerke" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_datenbereitstellung">
+    <bpmndi:BPMNPlane id="Plane_datenbereitstellung" bpmnElement="Collab_datenbereitstellung">
+      <bpmndi:BPMNShape id="Auftraggeber_di" bpmnElement="Auftraggeber" isHorizontal="true"><dc:Bounds x="0" y="0" width="1470" height="70" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Analyse_di" bpmnElement="Analyse" isHorizontal="true"><dc:Bounds x="0" y="170" width="1470" height="720" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="A_di" bpmnElement="A" isHorizontal="true"><dc:Bounds x="30" y="170" width="1440" height="390" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="S_di" bpmnElement="S" isHorizontal="true"><dc:Bounds x="30" y="560" width="1440" height="330" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Start_di" bpmnElement="Start"><dc:Bounds x="112" y="282" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="85" y="322" width="90" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Pruefen_di" bpmnElement="Pruefen" isExpanded="false"><dc:Bounds x="280" y="660" width="140" height="80" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="OK_di" bpmnElement="OK" isMarkerVisible="true"><dc:Bounds x="565" y="675" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="535" y="645" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Fertig_di" bpmnElement="Fertig"><dc:Bounds x="792" y="682" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="765" y="722" width="90" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Anfordern_di" bpmnElement="Anfordern"><dc:Bounds x="520" y="260" width="140" height="80" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Warten_di" bpmnElement="Warten" isMarkerVisible="true"><dc:Bounds x="825" y="275" width="50" height="50" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Paket_di" bpmnElement="Paket"><dc:Bounds x="1082" y="282" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1055" y="322" width="90" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Frist_di" bpmnElement="Frist"><dc:Bounds x="832" y="452" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="745" y="510" width="170" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Schliessen_di" bpmnElement="Schliessen"><dc:Bounds x="1030" y="430" width="140" height="80" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ende_di" bpmnElement="Ende"><dc:Bounds x="1342" y="452" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1270" y="510" width="180" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="F1_di" bpmnElement="F1"><di:waypoint x="148" y="300" /><di:waypoint x="220" y="300" /><di:waypoint x="220" y="700" /><di:waypoint x="280" y="700" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F2_di" bpmnElement="F2"><di:waypoint x="420" y="700" /><di:waypoint x="565" y="700" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F3_di" bpmnElement="F3"><di:waypoint x="615" y="700" /><di:waypoint x="792" y="700" /><bpmndi:BPMNLabel><dc:Bounds x="623" y="680" width="60" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F4_di" bpmnElement="F4"><di:waypoint x="590" y="675" /><di:waypoint x="590" y="340" /><bpmndi:BPMNLabel><dc:Bounds x="600" y="580" width="60" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F5_di" bpmnElement="F5"><di:waypoint x="660" y="300" /><di:waypoint x="825" y="300" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F6_di" bpmnElement="F6"><di:waypoint x="875" y="300" /><di:waypoint x="1082" y="300" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F7_di" bpmnElement="F7"><di:waypoint x="850" y="325" /><di:waypoint x="850" y="452" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F8_di" bpmnElement="F8"><di:waypoint x="1118" y="300" /><di:waypoint x="1200" y="300" /><di:waypoint x="1200" y="200" /><di:waypoint x="260" y="200" /><di:waypoint x="260" y="600" /><di:waypoint x="350" y="600" /><di:waypoint x="350" y="660" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F9_di" bpmnElement="F9"><di:waypoint x="868" y="470" /><di:waypoint x="1030" y="470" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="F10_di" bpmnElement="F10"><di:waypoint x="1170" y="470" /><di:waypoint x="1342" y="470" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="M1_di" bpmnElement="M1"><di:waypoint x="590" y="260" /><di:waypoint x="590" y="70" /><bpmndi:BPMNLabel><dc:Bounds x="600" y="105" width="120" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="M2_di" bpmnElement="M2"><di:waypoint x="1100" y="70" /><di:waypoint x="1100" y="282" /><bpmndi:BPMNLabel><dc:Bounds x="1110" y="105" width="170" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="M3_di" bpmnElement="M3"><di:waypoint x="1170" y="470" /><di:waypoint x="1300" y="470" /><di:waypoint x="1300" y="70" /><bpmndi:BPMNLabel><dc:Bounds x="1310" y="105" width="120" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Vermerke_di" bpmnElement="Vermerke"><dc:Bounds x="325" y="800" width="36" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="293" y="854" width="100" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="A1_di" bpmnElement="A1"><di:waypoint x="350" y="740" /><di:waypoint x="343" y="800" /></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
