@@ -1,6 +1,6 @@
 # Onlinebücher: Prüfung für WS 2026/27
 
-Stand: 07.11.2026. Statische Stichprobe der veröffentlichten HTML-Texte und Codebeispiele, Abgleich mit Herstellerdokumentation. Keine vollständige Notebook-Ausführung. Die Bücher wurden nicht geändert.
+Stand der Erstprüfung: 07.11.2026. Die folgenden Befunde dokumentieren die veröffentlichte Fassung vor der lokalen Korrektur. Der Stand der anschließenden Umsetzung und Ausführungsprüfung steht am Ende dieses Dokuments.
 
 ## Belegte Befunde
 
@@ -28,3 +28,21 @@ Die statischen API-Befunde belegen Probleme mit aktuellen Bibliotheken. Welche �
 - [pandas: DataFrame.drop](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html)
 - [scikit-learn: train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
 - [Astral: uv-Installation](https://docs.astral.sh/uv/getting-started/installation/)
+
+## Lokale Aktualisierung auf uv und Python 3.14
+
+Die drei Bücher werden lokal in `/Users/jankirenz/code/archive/books/` gepflegt. Jede Arbeitskopie enthält jetzt `pyproject.toml`, `.python-version` und `uv.lock`. Notebook-Kernel werden projektlokal registriert. Die bestehenden Buchformate bleiben erhalten. Die Onlinefassung wurde nicht veröffentlicht.
+
+Toolkit: zentraler Einrichtungsweg über uv und Python 3.14; macOS-/Linux- und PowerShell-Befehle. Python 3.13.7, temporäres Projekt, Paketinstallation, Programmlauf und tatsächliche Notebook-Ausführung geprüft. Quarto rendert alle 36 Kapitel. Zwei bestehende Warnungen im unveränderten PostgreSQL-Kapitel bleiben. Prüfprotokoll: `/Users/jankirenz/code/archive/books/toolkit-de/docs/pruefung-python314.md`.
+
+Data Science with Python: RMSE, IsolationForest mit Vorverarbeitung, numerische pandas-Zusammenfassungen, Variablenname und Fehlerauswahl korrigiert. Die betroffenen echten Codeblöcke laufen mit gemischten Testdaten einschließlich fehlender Werte und unbekannter Kategorie. Der vollständige digits-Gridsearch läuft; der Buchbuild besteht ohne Warnungen. Prüfprotokoll und Grenzen: `/Users/jankirenz/code/archive/books/ds-python/VALIDATION.md`.
+
+Python 3.14: Zusätzlich isoliert mit CPython 3.14.9 geprüft. Toolkit: alle Abhängigkeiten installiert; echte Notebook-Ausführung über eigenen Kernel mit NumPy, pandas, SciPy, Matplotlib und Altair erfolgreich. Data Science with Python: alle 153 Laufzeit-/Build-Pakete installiert; identischer vollständiger Codeharness einschließlich digits-Gridsearch und Buchbuild erfolgreich. Die Hersteller weisen Unterstützung für aktuelle scikit-learn-, statsmodels- und pyGAM-Versionen aus. Nach den erfolgreichen isolierten Prüfungen wurde Python 3.14 ausdrücklich als verbindliche Zielversion gewählt. Projektkonfiguration, Lockdateien und Einrichtung sind entsprechend angepasst. Alle drei lokalen Projektumgebungen verwenden Python 3.14.9. Die ersten 3.13-Prüfungen bleiben als zusätzlicher Nachweis dokumentiert.
+
+Unterstützungszeitraum laut [Python Developer Guide](https://devguide.python.org/versions/): Python 3.13 bis Oktober 2029, Python 3.14 bis Oktober 2030. Für längere Nutzbarkeit ist 3.14 bei bestandenen Anwendungstests vorzuziehen. Bibliotheks- und Inhaltswartung bleibt unabhängig davon erforderlich.
+
+Die Umstellung betrifft die drei Onlinebücher. Das Statistik-Labor und die separaten Kursvorlagen wurden in dieser Arbeitseinheit nicht auf eine andere Python-Version migriert. Windows-Befehle sind dokumentiert, aber nicht auf einem Windows-System ausgeführt.
+
+Regression: Alle zehn betroffenen Notebooks wurden unter Python 3.13 vollständig ausgeführt, einschließlich der vollständigen California-Housing-Suchen. Unter Python 3.14.9 liefen neun Notebooks vollständig; California Housing wurde mit allen Zellen, aber reduziertem Suchumfang erfolgreich geprüft. Der reduzierte Lauf prüft API-Kompatibilität und ist kein Vergleich gleicher Modellgüte. Zusätzlich wurde pyGAM unter 3.14 mit fit/predict geprüft. Korrigiert wurden neben RMSE auch XGBoost early stopping, entfernte pandas-/GradientBoosting-Aufrufe, positionsbasierte Zugriffe, Boxplot-Parameter und HTML-Tabellenimport. Die Korrekturen und Suchgrenzen sind unter `/Users/jankirenz/code/archive/books/regression/VALIDATION.md` dokumentiert.
+
+Der lokale Regressionsbuch-Build ist erfolgreich. Bestehende Plotly-MIME- und Archivnotebook-Warnungen bleiben. macOS benötigt für XGBoost die OpenMP-Laufzeit; im Test wurde diese ausschließlich unter dem ignorierten Prüfverzeichnis bereitgestellt. Es fand keine globale Systeminstallation statt. Die Einrichtung dokumentiert diese Voraussetzung.
