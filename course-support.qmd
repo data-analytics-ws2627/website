@@ -4,6 +4,6 @@ title: "Unterstützung"
 
 ## Fachliche Fragen
 
-Fragen zu Beispielen, Übungen und Methoden können in der Vorlesung oder im Forum des aktuellen [Moodle-Kurses](https://moodle.hdm-stuttgart.de/login/index.php) besprochen werden.
+Fragen zu Beispielen, Übungen und Methoden können in der Vorlesung oder im Forum des aktuellen [Moodle-Kurses](https://moodle.hdm-stuttgart.de/course/view.php?id=25959) besprochen werden.
 
 Bei technischen Fragen helfen der ausgeführte Befehl, die vollständige Fehlermeldung und das verwendete Betriebssystem. Zugangsdaten und vertrauliche Daten dürfen nicht im Forum stehen.
