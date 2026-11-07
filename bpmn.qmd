@@ -1211,6 +1211,6 @@ Die drei parallelen Instanzen und die zwei parallelen Prüfungen innerhalb jeder
 
 ## Quellen
 
-[Data Science Lifecycle, Originalfolien](https://docs.google.com/presentation/d/1LR0LmvKFycE3MIjfDEp6L_bGdJtCOe60rFycWIYayBI/export/pdf)
+Data Science Lifecycle, Originalfolien: [PDF](https://docs.google.com/presentation/d/1LR0LmvKFycE3MIjfDEp6L_bGdJtCOe60rFycWIYayBI/export/pdf) · [Slides](https://docs.google.com/presentation/d/1LR0LmvKFycE3MIjfDEp6L_bGdJtCOe60rFycWIYayBI/preview){target="_blank" rel="noopener"}
 
 [Business Process Model and Notation, Version 2.0.2](https://www.omg.org/spec/BPMN/2.0.2)

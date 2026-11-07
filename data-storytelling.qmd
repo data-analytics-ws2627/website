@@ -21,20 +21,20 @@ The slides are mainly based on the following resources:
 
 |	Nr.	|	Topic	|	Literature	|		Slides		|
 |	---	|	---	|	---	|		---		|
-|	1	|	Data storytelling	|		|		[📑](https://docs.google.com/presentation/d/1irnXZ4O9d3xVypWxOkViNmUzqr5Q1dVRuxi17VAmKaM/export/pdf)		|
-|	2	|	The importance of context	|		|		[📑](https://docs.google.com/presentation/d/1XXsxfPoo2kCCnR8FZ6Bs4CGpfx81_vck-VY2C7meEOM/export/pdf)		|
-|	3	|	Pet shelter case study	|		|		[📑](https://docs.google.com/presentation/d/1L-QNkIez3WQ6jt4lwUv_Sf-UokwwlgL3Og5drO5Vs18/export/pdf)		|
-|	4	|	Back to school sale case study	|		|		[📑](https://docs.google.com/presentation/d/1_jGHyu0aKsQk7jxOmHgscreCrfcqrp9WbQdtWyg087o/export/pdf)		|
+|	1	|	Data storytelling	|		|		[PDF](https://docs.google.com/presentation/d/1irnXZ4O9d3xVypWxOkViNmUzqr5Q1dVRuxi17VAmKaM/export/pdf) · [Slides](https://docs.google.com/presentation/d/1irnXZ4O9d3xVypWxOkViNmUzqr5Q1dVRuxi17VAmKaM/preview){target="_blank" rel="noopener"}		|
+|	2	|	The importance of context	|		|		[PDF](https://docs.google.com/presentation/d/1XXsxfPoo2kCCnR8FZ6Bs4CGpfx81_vck-VY2C7meEOM/export/pdf) · [Slides](https://docs.google.com/presentation/d/1XXsxfPoo2kCCnR8FZ6Bs4CGpfx81_vck-VY2C7meEOM/preview){target="_blank" rel="noopener"}		|
+|	3	|	Pet shelter case study	|		|		[PDF](https://docs.google.com/presentation/d/1L-QNkIez3WQ6jt4lwUv_Sf-UokwwlgL3Og5drO5Vs18/export/pdf) · [Slides](https://docs.google.com/presentation/d/1L-QNkIez3WQ6jt4lwUv_Sf-UokwwlgL3Og5drO5Vs18/preview){target="_blank" rel="noopener"}		|
+|	4	|	Back to school sale case study	|		|		[PDF](https://docs.google.com/presentation/d/1_jGHyu0aKsQk7jxOmHgscreCrfcqrp9WbQdtWyg087o/export/pdf) · [Slides](https://docs.google.com/presentation/d/1_jGHyu0aKsQk7jxOmHgscreCrfcqrp9WbQdtWyg087o/preview){target="_blank" rel="noopener"}		|
 |	5	|	Big idea worksheet	|		|		[📑](https://docs.google.com/document/d/1-GZvhdbhLYLB_Bo1arj1rgTqbJ5SUoU21vtgbYEhVqk/edit?usp=sharing)		|
 |	6	|	Narrow your audience	|		|		[📑](https://docs.google.com/document/d/1Eu21TCIM0Lx6LiybPG-15ikk0gkRaqbCQNtcl3fAfGQ/edit?usp=sharing)		|
 |	7	|	Storyboard 1	|		|		[📑](https://docs.google.com/document/d/1cuiBZiWaUkhAYNkQo6SWtWm8n_Q1IJt54lw0Na2-0DE/edit?usp=sharing)		|
 |	8	|	Storyboard 2	|		|		[📑](https://docs.google.com/document/d/1WeLzE85YfM-F9-vAIhEbeJHkuHsN3xtovzIokB93BRU/edit?usp=sharing)		|
-|	9	|	Choose an appropriate display	|		|		[📑](https://docs.google.com/presentation/d/1-uFVcFI7Y1ShyToEzahbg0VlkLnyn7A5Dq7NaHrZmU0/export/pdf)		|
-|	10	|	Eliminate clutter	|		|		[📑](https://docs.google.com/presentation/d/1ixTCCx1xylQveXPwcV3g19fa_ZyXRJYXl69yG6kG7CE/export/pdf)		|
-|	11	|	Focus attention	|		|		[📑](https://docs.google.com/presentation/d/1rwyx33EkV7ioIKee_d6ng6Sobi3eg1EFh2q36Yvx6Gc/export/pdf)		|
-|	12	|	Think like a designer	|		|		[📑](https://docs.google.com/presentation/d/1HT-LiV_BhbVw6pTa2JGZOndPakdfCsqDSC4nWSGAf8w/export/pdf)		|
-|	13	|	Exercises	|		|		[📑](https://docs.google.com/presentation/d/1Fz3v1euhIoyZgvP71LmhWwvWdTTDfAK1i_-yuWl-Zfc/export/pdf)		|
-|	14	|	Tell a Story	|		|		[📑](https://docs.google.com/presentation/d/1L5GKC1UsWhMMCqs4ULA4jo7VZlrFInDn1dWif0KYRds/export/pdf)		|
-|	15	|	How to deliver a presentation	|		|		[📑](https://docs.google.com/presentation/d/1ebeDWDk-ytY9qGx2peBLFyoSxTh3EezvN-jzW6Fe7dM/export/pdf)		|
-|	16	|	Reporting with Quarto	|		|		[📑](https://docs.google.com/presentation/d/NA/export/pdf)		|
-|	17	|	Streamlit dashboard	|		|		[📑](https://docs.google.com/presentation/d/NA/export/pdf)		|
+|	9	|	Choose an appropriate display	|		|		[PDF](https://docs.google.com/presentation/d/1-uFVcFI7Y1ShyToEzahbg0VlkLnyn7A5Dq7NaHrZmU0/export/pdf) · [Slides](https://docs.google.com/presentation/d/1-uFVcFI7Y1ShyToEzahbg0VlkLnyn7A5Dq7NaHrZmU0/preview){target="_blank" rel="noopener"}		|
+|	10	|	Eliminate clutter	|		|		[PDF](https://docs.google.com/presentation/d/1ixTCCx1xylQveXPwcV3g19fa_ZyXRJYXl69yG6kG7CE/export/pdf) · [Slides](https://docs.google.com/presentation/d/1ixTCCx1xylQveXPwcV3g19fa_ZyXRJYXl69yG6kG7CE/preview){target="_blank" rel="noopener"}		|
+|	11	|	Focus attention	|		|		[PDF](https://docs.google.com/presentation/d/1rwyx33EkV7ioIKee_d6ng6Sobi3eg1EFh2q36Yvx6Gc/export/pdf) · [Slides](https://docs.google.com/presentation/d/1rwyx33EkV7ioIKee_d6ng6Sobi3eg1EFh2q36Yvx6Gc/preview){target="_blank" rel="noopener"}		|
+|	12	|	Think like a designer	|		|		[PDF](https://docs.google.com/presentation/d/1HT-LiV_BhbVw6pTa2JGZOndPakdfCsqDSC4nWSGAf8w/export/pdf) · [Slides](https://docs.google.com/presentation/d/1HT-LiV_BhbVw6pTa2JGZOndPakdfCsqDSC4nWSGAf8w/preview){target="_blank" rel="noopener"}		|
+|	13	|	Exercises	|		|		[PDF](https://docs.google.com/presentation/d/1Fz3v1euhIoyZgvP71LmhWwvWdTTDfAK1i_-yuWl-Zfc/export/pdf) · [Slides](https://docs.google.com/presentation/d/1Fz3v1euhIoyZgvP71LmhWwvWdTTDfAK1i_-yuWl-Zfc/preview){target="_blank" rel="noopener"}		|
+|	14	|	Tell a Story	|		|		[PDF](https://docs.google.com/presentation/d/1L5GKC1UsWhMMCqs4ULA4jo7VZlrFInDn1dWif0KYRds/export/pdf) · [Slides](https://docs.google.com/presentation/d/1L5GKC1UsWhMMCqs4ULA4jo7VZlrFInDn1dWif0KYRds/preview){target="_blank" rel="noopener"}		|
+|	15	|	How to deliver a presentation	|		|		[PDF](https://docs.google.com/presentation/d/1ebeDWDk-ytY9qGx2peBLFyoSxTh3EezvN-jzW6Fe7dM/export/pdf) · [Slides](https://docs.google.com/presentation/d/1ebeDWDk-ytY9qGx2peBLFyoSxTh3EezvN-jzW6Fe7dM/preview){target="_blank" rel="noopener"}		|
+|	16	|	Reporting with Quarto	|		|		–		|
+|	17	|	Streamlit dashboard	|		|		–		|
