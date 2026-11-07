@@ -11,6 +11,12 @@ Dieser Kurs bietet Gelegenheit, diese Veränderungen praktisch zu erkunden und d
 
 Im Mittelpunkt steht die Fähigkeit, eine Datenanalyse mit KI selbstständig zu entwickeln und zu verantworten. Dazu gehören geeignete Methoden, überprüfbare Berechnungen und verständliche Empfehlungen. Die Verbindung mit Fragen aus dem eigenen Arbeitsumfeld hilft, den Nutzen für die eigene berufliche Praxis einzuschätzen.
 
+## Kursplan
+
+Der Kursplan enthält alle Themen mit Literatur, Folien, Code und Arbeitsformen.
+
+[Kursplan öffnen](course-materials.qmd){.btn .btn-primary}
+
 ## Einstieg
 
 1. Den vollständigen Grundlagenkurs [Produktiv mit einem Agenten arbeiten](https://kurse.kirenz.de/courses/agent-arbeitsumgebung) bearbeiten.
@@ -23,7 +29,6 @@ Die [Kursübersicht](course-overview.qmd#online-und-präsenz) zeigt die Aufteilu
 
 Die Statistik folgt den Folien und *Introduction to Modern Statistics*: Fragestellung und Daten, Studiendesign, Exploration, Modelle und statistische Inferenz. Die Beispiele werden schrittweise entwickelt und anschließend in Python nachvollzogen.
 
-- [Detaillierte Kursübersicht: Literatur, Folien, Code und Arbeitsformen](course-materials.qmd)
 - [BPMN: Data-Science-Prozesse gestalten](bpmn.qmd)
 - [Coding-Agenten für Analyseaufträge nutzen](coding-agents.qmd)
 - [Data Storytelling](data-storytelling.qmd)

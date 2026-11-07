@@ -1,5 +1,5 @@
 ---
-title: "Detaillierte Kursübersicht"
+title: "Kursplan"
 ---
 
 Die Übersicht führt jedes Thema mit Literatur, Folien, Code und Arbeitsform auf. Die statistischen Themen folgen der Reihenfolge der Originalfolien.

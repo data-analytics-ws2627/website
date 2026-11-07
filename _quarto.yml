@@ -71,6 +71,8 @@ website:
         contents:
           - href: course-overview.qmd
             text: Überblick
+          - href: course-materials.qmd
+            text: Kursplan
           - href: course-syllabus.qmd
             text: Kursbeschreibung
           - href: course-support.qmd
@@ -80,7 +82,6 @@ website:
 
       - section: "Materialien"
         contents:
-          - course-materials.qmd
           - bpmn.qmd
           - coding-agents.qmd
           - data-storytelling.qmd

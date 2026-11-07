@@ -10,7 +10,7 @@ Generative KI verändert, wie Analysen entstehen. Coding-Agenten können Code sc
 
 ## Online und Präsenz
 
-Die kompakte Übersicht zeigt einen Planungsvorschlag für das Wintersemester 2026/27. Die [detaillierte Kursübersicht](course-materials.qmd) enthält die Einzelthemen mit ihren bisherigen Arbeitsformen. Online bedeutet selbstständiges Arbeiten mit den verlinkten Kursen, Folien, Buchabschnitten und Notebooks. In Präsenz werden Beispiele gemeinsam entwickelt, Methoden erklärt und Ergebnisse diskutiert.
+Die kompakte Übersicht zeigt einen Planungsvorschlag für das Wintersemester 2026/27. Die [Kursplan](course-materials.qmd) enthält die Einzelthemen mit ihren bisherigen Arbeitsformen. Online bedeutet selbstständiges Arbeiten mit den verlinkten Kursen, Folien, Buchabschnitten und Notebooks. In Präsenz werden Beispiele gemeinsam entwickelt, Methoden erklärt und Ergebnisse diskutiert.
 
 | Thema | Online-Selbststudium | Präsenz |
 |---|---|---|
