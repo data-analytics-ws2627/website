@@ -41,7 +41,7 @@ Python 3.14: Zusätzlich isoliert mit CPython 3.14.9 geprüft. Toolkit: alle Abh
 
 Unterstützungszeitraum laut [Python Developer Guide](https://devguide.python.org/versions/): Python 3.13 bis Oktober 2029, Python 3.14 bis Oktober 2030. Für längere Nutzbarkeit ist 3.14 bei bestandenen Anwendungstests vorzuziehen. Bibliotheks- und Inhaltswartung bleibt unabhängig davon erforderlich.
 
-Die Umstellung betrifft die drei Onlinebücher. Das Statistik-Labor und die separaten Kursvorlagen wurden in dieser Arbeitseinheit nicht auf eine andere Python-Version migriert. Windows-Befehle sind dokumentiert, aber nicht auf einem Windows-System ausgeführt.
+Die erste Umstellung betraf die drei Onlinebücher. Anschließend wurden auch Statistik-Labor und Kursvorlagen auf Python 3.14 migriert; siehe [Prüfung der Kursvorlagen](pruefung-kursvorlagen-python314.md). Windows-Befehle sind dokumentiert, aber nicht auf einem Windows-System ausgeführt.
 
 Regression: Alle zehn betroffenen Notebooks wurden unter Python 3.13 vollständig ausgeführt, einschließlich der vollständigen California-Housing-Suchen. Unter Python 3.14.9 liefen neun Notebooks vollständig; California Housing wurde mit allen Zellen, aber reduziertem Suchumfang erfolgreich geprüft. Der reduzierte Lauf prüft API-Kompatibilität und ist kein Vergleich gleicher Modellgüte. Zusätzlich wurde pyGAM unter 3.14 mit fit/predict geprüft. Korrigiert wurden neben RMSE auch XGBoost early stopping, entfernte pandas-/GradientBoosting-Aufrufe, positionsbasierte Zugriffe, Boxplot-Parameter und HTML-Tabellenimport. Die Korrekturen und Suchgrenzen sind unter `/Users/jankirenz/code/archive/books/regression/VALIDATION.md` dokumentiert.
 

@@ -2,7 +2,7 @@
 title: "Python-Umgebung einrichten"
 ---
 
-Das Statistik-Labor enthält die Daten und Notebooks für Exploration, Inferenz und Modelle. uv richtet dafür eine Python-Umgebung mit den festgelegten Paketversionen ein. Jupyter Lab öffnet die Notebooks im Browser.
+Das Statistik-Labor enthält die Daten und Notebooks für Exploration, Inferenz und Modelle. uv richtet dafür eine Python-3.14-Umgebung mit den festgelegten Paketversionen ein. Jupyter Lab öffnet die Notebooks im Browser.
 
 ## uv installieren
 
@@ -60,13 +60,28 @@ Voraussetzung: Das Terminal befindet sich im Ordner mit `pyproject.toml` und `uv
 uv sync --locked
 ```
 
-2. Jupyter Lab starten:
+2. Die Python-Version prüfen:
+
+```bash
+uv run --locked python --version
+```
+
+Prüfkriterium: Die Ausgabe beginnt mit `Python 3.14`.
+
+3. Den Notebook-Kernel in der Projektumgebung registrieren:
+
+```bash
+uv run --locked python -m ipykernel install --sys-prefix --name data-analytics --display-name "Python 3.14 (Data Analytics)"
+```
+
+4. Jupyter Lab starten:
 
 ```bash
 uv run --locked jupyter lab
 ```
 
-3. Im Browser `eda/eda-netflix-loans.ipynb` öffnen.
-4. Die Einrichtungs- und Einlesezellen am Anfang ausführen.
+5. Im Browser `eda/eda-netflix-loans.ipynb` öffnen.
+6. Den Kernel „Python 3.14 (Data Analytics)“ auswählen.
+7. Die Einrichtungs- und Einlesezellen am Anfang ausführen.
 
 **Prüfkriterium:** Die Daten werden ohne Fehlermeldung geladen. Die Netflix-Tabelle enthält 2.000 Zeilen.
