@@ -2,15 +2,19 @@
 title: "Überblick"
 ---
 
-![](/images/logo.png){width="50%"}
+Generative KI verändert die Arbeit mit Daten. Viele Arbeitsschritte lassen sich beschleunigen, neue Aufgaben werden zugänglich. Gleichzeitig müssen Fragestellungen präzisiert, Daten eingeordnet und Ergebnisse geprüft werden. Auch eine überzeugend formulierte Analyse kann auf ungeeigneten Annahmen beruhen.
 
-Data Analytics verbindet eine fachliche Frage mit Daten, statistischen Methoden und einer begründeten Entscheidung. Der Kurs behandelt Datenaufbereitung, explorative Datenanalyse, statistische Inferenz, Vorhersagemodelle und die verständliche Darstellung von Ergebnissen in Python.
+Dieser Kurs bietet Gelegenheit, diese Veränderungen praktisch zu erkunden und die eigenen Fähigkeiten weiterzuentwickeln. Dabei wird sichtbar, welche Aufgaben sich an KI übertragen lassen, welche Unterstützung hilfreich ist und wo fachliches Urteil erforderlich bleibt.
 
-Generative KI verändert, wie Analysen entstehen. Coding-Agenten können Code schreiben und Fehler suchen. Für die Auswahl der Daten, die Prüfung der Methoden und die Interpretation der Ergebnisse bleibt fachliches Verständnis erforderlich. Der Kurs verbindet deshalb die Arbeit mit KI mit nachvollziehbaren Analysen.
+Im Mittelpunkt steht die Fähigkeit, eine Datenanalyse mit KI selbstständig zu entwickeln und zu verantworten. Dazu gehören geeignete Methoden, überprüfbare Berechnungen und verständliche Empfehlungen. Die Verbindung mit Fragen aus dem eigenen Arbeitsumfeld hilft, den Nutzen für die eigene berufliche Praxis einzuschätzen.
+
+## Arbeitsformen
+
+**Präsenz** bezeichnet die gemeinsame Vorlesung, **Selbststudium** die eigenständige Bearbeitung und **Übung** eine Anwendungsaufgabe. **Optional** kennzeichnet ergänzende Vertiefungen. Selbststudium setzt keine Online-Vorlesung voraus.
 
 ## Online und Präsenz
 
-Die kompakte Übersicht zeigt einen Planungsvorschlag für das Wintersemester 2026/27. Die [Kursplan](course-materials.qmd) enthält die Einzelthemen mit ihren bisherigen Arbeitsformen. Online bedeutet selbstständiges Arbeiten mit den verlinkten Kursen, Folien, Buchabschnitten und Notebooks. In Präsenz werden Beispiele gemeinsam entwickelt, Methoden erklärt und Ergebnisse diskutiert.
+Die kompakte Übersicht zeigt einen Planungsvorschlag für das Wintersemester 2026/27. Der [Kursplan](course-materials.qmd) enthält die Einzelthemen mit ihren bisherigen Arbeitsformen. Online bedeutet selbstständiges Arbeiten mit den verlinkten Kursen, Folien, Buchabschnitten und Notebooks. In Präsenz werden Beispiele gemeinsam entwickelt, Methoden erklärt und Ergebnisse diskutiert.
 
 | Thema | Online-Selbststudium | Präsenz |
 |---|---|---|

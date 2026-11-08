@@ -1,11 +1,11 @@
 project:
   type: website
   render:
-    - index.qmd
+    - course-materials.qmd
     - course-overview.qmd
     - course-syllabus.qmd
     - course-support.qmd
-    - course-materials.qmd
+    - online-books.qmd
     - programming-requirements.qmd
     - bpmn.qmd
     - coding-agents.qmd
@@ -41,8 +41,8 @@ website:
     left: |
       © [Jan Kirenz](https://www.kirenz.com/), 2026
     center:
-      - text: "Kursstart"
-        href: index.qmd
+      - text: "Kursplan"
+        href: course-materials.qmd
       - text: "Kursbeschreibung"
         href: course-syllabus.qmd  
     right:
@@ -70,18 +70,19 @@ website:
     search: true
     collapse-level: 1
     contents:
+      - href: course-materials.qmd
+        text: Kursplan
+      - href: online-books.qmd
+        text: Onlinebücher
+
       - section: "Kursinformationen"
         contents:
           - href: course-overview.qmd
             text: Überblick
-          - href: course-materials.qmd
-            text: Kursplan
           - href: course-syllabus.qmd
             text: Kursbeschreibung
           - href: course-support.qmd
             text: Unterstützung
-          - href: index.qmd
-            text: Kursstart
 
       - section: "Materialien"
         contents:

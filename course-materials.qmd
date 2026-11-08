@@ -1,27 +1,16 @@
 ---
-title: "Kursplan"
+title: "Data Analytics with Generative AI"
+subtitle: "Wintersemester 2026/27"
+output-file: index.html
+aliases:
+  - course-materials.html
 ---
-
-Die Übersicht führt jedes Thema mit Literatur, Folien, Code und Arbeitsform auf. Die statistischen Themen folgen der Reihenfolge der Originalfolien.
-
-**Präsenz** bezeichnet die gemeinsame Vorlesung, **Selbststudium** die eigenständige Bearbeitung und **Übung** eine Anwendungsaufgabe. **Optional** kennzeichnet ergänzende Vertiefungen. Selbststudium setzt keine Online-Vorlesung voraus.
-
-Die [kompakte Übersicht](course-overview.qmd#online-und-präsenz) bündelt die Themen. Die Zuordnung der statistischen Einzelthemen unten folgt dem bisherigen Kurs; für KI und BPMN ist die Arbeitsform vorläufig.
-
-## Onlinebücher
-
-| Buch | Verwendung im Kurs |
-|---|---|
-| [Data Science, AI & Analytics Toolkit](https://kirenz.github.io/toolkit-de/) | Werkzeuge, Python, Jupyter, GitHub und uv; Nachschlagewerk zur [Arbeitsumgebung](programming-requirements.qmd) |
-| [Data Science with Python](https://kirenz.github.io/ds-python/docs/intro.html) | Data-Science-Lifecycle mit Plan, Data, Model und Deployment |
-| [Introduction to Regression Models](https://kirenz.github.io/regression/docs/intro.html) | Regressionsmodelle, Modellprüfung und Python-Beispiele |
-| [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) | Statistische Grundlagen; einzelne Buchabschnitte sind bei den Themen verlinkt |
 
 ## Einstieg mit KI und Arbeitsumgebung
 
 | Thema | Literatur | Materialien | Code | Arbeitsform |
 |---|---|---|---|---|
-| Bedeutung von KI für die eigene Arbeit und Rolle | | [Kurseinstieg](index.qmd) | | Präsenz |
+| Bedeutung von KI für die eigene Arbeit und Rolle | | | | Präsenz |
 | Produktiv mit einem Agenten arbeiten | | [Vollständiger Grundlagenkurs](https://kurse.kirenz.de/courses/agent-arbeitsumgebung) | | Selbststudium |
 | Python-Umgebung und Statistik-Labor | [Toolkit](https://kirenz.github.io/toolkit-de/) | [Einrichtung mit uv](programming-requirements.qmd) | [Statistik-Labor](downloads/statistik-lab.zip) | Selbststudium |
 

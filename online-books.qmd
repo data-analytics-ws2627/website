@@ -1,0 +1,10 @@
+---
+title: "Onlinebücher"
+---
+
+| Buch | Verwendung im Kurs |
+|---|---|
+| [Data Science, AI & Analytics Toolkit](https://kirenz.github.io/toolkit-de/) | Werkzeuge, Python, Jupyter, GitHub und uv; Nachschlagewerk zur [Arbeitsumgebung](programming-requirements.qmd) |
+| [Data Science with Python](https://kirenz.github.io/ds-python/docs/intro.html) | Data-Science-Lifecycle mit Plan, Data, Model und Deployment |
+| [Introduction to Regression Models](https://kirenz.github.io/regression/docs/intro.html) | Regressionsmodelle, Modellprüfung und Python-Beispiele |
+| [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) | Statistische Grundlagen; einzelne Buchabschnitte sind bei den Themen verlinkt |
