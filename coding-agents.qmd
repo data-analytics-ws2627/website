@@ -6,6 +6,12 @@ title: "Coding-Agenten für Analyseaufträge"
 
 [Produktiv mit einem Agenten arbeiten](https://kurse.kirenz.de/courses/agent-arbeitsumgebung) bleibt ein vollständiger, eigenständiger Kurs am Anfang. Er behandelt Projektordner, erste Aufträge, AGENTS.md, Skills und MCP. Danach beginnt hier die Anwendung auf Datenanalysen.
 
+## Erst selbst, dann Agent
+
+Die Pandas- und Modellübungen sichern die Grundlagen: Bezugsgrößen wählen, Code lesen, Ergebnisse einordnen. Diese Aufgaben werden selbst gelöst. Ein Coding-Agent erklärt dabei Fehlermeldungen und Begriffe, gibt Hinweise auf den nächsten Schritt und kommentiert eine fertige eigene Lösung. Die vorhandenen Prüfzellen zeigen, ob die eigene Lösung die fachlichen Anforderungen erfüllt.
+
+Im Statistik-Labor und im Projekt übernimmt der Agent Berechnungen. Die Prüfung verlagert sich dann auf den Auftrag und die Gegenrechnung: Welche Daten und Nenner verwendet der Code, und stimmt die Erklärung mit der Tabelle überein? Diese Prüfung gelingt nur mit den Grundlagen aus den eigenen Übungen.
+
 ## Ein begrenzter Analyseauftrag
 
 Ein Coding-Agent kann Daten einlesen und Berechnungen ausführen. Die Wahl einer geeigneten Bezugsgröße und die Interpretation des Ergebnisses müssen fachlich geprüft werden. Beim Netflix-Beispiel ist der Anteil positiver Ergebnisse innerhalb jeder Gruppe relevant.

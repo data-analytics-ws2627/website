@@ -25,6 +25,8 @@ Die vier Schritte der [Projektvorbereitung](project-planning.qmd) verbinden Anwe
 
 ## Data
 
+Lokales Beispiel im [Statistik-Labor](programming-requirements.qmd): `eda/eda-netflix-loans.ipynb`, Abschnitt „Netflix: Daten und Bezugsgröße“.
+
 | Thema | Literatur | Folien / Materialien | Code | Arbeitsform |
 |---|---|---|---|---|
 | First Data Analysis | [Buch](https://openintro-ims.netlify.app/data-hello.html#case-study-stents-strokes) | [PDF](https://docs.google.com/presentation/d/1YXoCWZv37c3u_cMBc3o2_IG_atDlGdLhCwin_Rciwck/export/pdf) · [Slides](https://docs.google.com/presentation/d/1YXoCWZv37c3u_cMBc3o2_IG_atDlGdLhCwin_Rciwck/preview){target="_blank" rel="noopener"} | [Code](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ae/1_netflix.ipynb "Python-Notebook öffnen") | Präsenz |
@@ -44,6 +46,8 @@ Die vier Schritte der [Projektvorbereitung](project-planning.qmd) verbinden Anwe
 
 ## EDA with categorical data
 
+Lokales Beispiel im [Statistik-Labor](programming-requirements.qmd): `eda/eda-netflix-loans.ipynb`, Abschnitt „Kreditanträge: Richtung der Bedingung“ mit absoluten Häufigkeiten, Zeilen- und Spaltenanteilen.
+
 | Thema | Literatur | Folien / Materialien | Code | Arbeitsform |
 |---|---|---|---|---|
 | Loans data | [Buch](https://openintro-ims.netlify.app/explore-categorical.html#explore-categorical) | [PDF](https://docs.google.com/presentation/d/1o0TVpTvndPA1J23CdTtEThYSekjudkGXuW9HiEA65yc/export/pdf) · [Slides](https://docs.google.com/presentation/d/1o0TVpTvndPA1J23CdTtEThYSekjudkGXuW9HiEA65yc/preview){target="_blank" rel="noopener"} | [Code](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/04-1-data-overview.ipynb "Python-Notebook öffnen") | Selbststudium |
@@ -55,6 +59,8 @@ Die vier Schritte der [Projektvorbereitung](project-planning.qmd) verbinden Anwe
 | Pie chart | [Buch](https://openintro-ims.netlify.app/explore-categorical.html#pie-charts) | [PDF](https://docs.google.com/presentation/d/1Ks3jugleTrpLHwI0CDcPl2P7Uvj5z-iR35iTKJeNGxY/export/pdf) · [Slides](https://docs.google.com/presentation/d/1Ks3jugleTrpLHwI0CDcPl2P7Uvj5z-iR35iTKJeNGxY/preview){target="_blank" rel="noopener"} | [Code](https://colab.research.google.com/github/kirenz/lab-altair/blob/main/ae/04-4-pie-charts-altair.ipynb "Python-Notebook öffnen") | Selbststudium |
 
 ## EDA with numerical data
+
+Lokales Beispiel im [Statistik-Labor](programming-requirements.qmd): `eda/eda-netflix-loans.ipynb`, Abschnitte 3 bis 6 zu Streudiagramm, Lage und Streuung, Histogramm, Boxplot und auffälligen Werten.
 
 | Thema | Literatur | Folien / Materialien | Code | Arbeitsform |
 |---|---|---|---|---|
@@ -76,6 +82,8 @@ Die vier Schritte der [Projektvorbereitung](project-planning.qmd) verbinden Anwe
 
 ## Linear Regression models
 
+Lokales Beispiel im [Statistik-Labor](programming-requirements.qmd): `modelle/sales-modellpruefung.ipynb`, Abschnitt „Rechenbeispiel: sechs Märkte“ mit Fehlerquadraten und dem Vergleich zum Mittelwert.
+
 Ergänzend: [Introduction to Regression Models](https://kirenz.github.io/regression/docs/intro.html), insbesondere [lineare Regression](https://kirenz.github.io/regression/docs/basics.html).
 
 | Thema | Literatur | Folien / Materialien | Code | Arbeitsform |
@@ -93,6 +101,8 @@ Ergänzend: [Introduction to Regression Models](https://kirenz.github.io/regress
 | Multiple predictors regression 3 |  |  | [Code](https://colab.research.google.com/github/kirenz/lab-ims/blob/main/ims/08a-3-multiple.ipynb "Python-Notebook öffnen") | Präsenz |
 
 ## Linear Regression with Data Splitting
+
+Lokales Beispiel im [Statistik-Labor](programming-requirements.qmd): `modelle/sales-modellpruefung.ipynb`, Abschnitte von „Datenaufteilung vor der Exploration“ bis „Auftrag an einen Coding-Agenten“, einschließlich Baseline und Kreuzvalidierung.
 
 | Thema | Literatur | Folien / Materialien | Code | Arbeitsform |
 |---|---|---|---|---|
@@ -127,6 +137,8 @@ Ergänzend: [Lasso-Regression](https://kirenz.github.io/regression/docs/lasso.ht
 
 ## Classification models
 
+Lokales Beispiel im [Statistik-Labor](programming-requirements.qmd): `modelle/sales-modellpruefung.ipynb`, Abschnitt „Klassifikation: Modellwert und Schwelle“.
+
 | Thema | Literatur | Folien / Materialien | Code | Arbeitsform |
 |---|---|---|---|---|
 | Classification |  | [PDF](https://docs.google.com/presentation/d/1Uait12xIaTM9rdyxSEnzIbR8opENnoOOPefuPocze3s/export/pdf) · [Slides](https://docs.google.com/presentation/d/1Uait12xIaTM9rdyxSEnzIbR8opENnoOOPefuPocze3s/preview){target="_blank" rel="noopener"} |  | Präsenz |
@@ -136,6 +148,8 @@ Ergänzend: [Lasso-Regression](https://kirenz.github.io/regression/docs/lasso.ht
 | Logistic regression in Python |  |  | [Code](https://colab.research.google.com/github/kirenz/notebooks/blob/main/ims/copy/99-1-logistic-online.ipynb "Python-Notebook öffnen") | Präsenz |
 
 ## Statistical Inference
+
+Lokales Beispiel im [Statistik-Labor](programming-requirements.qmd): `inferenz/inferenz.ipynb` mit Stichproben, Bootstrap-Konfidenzintervall, Nullmodell und A/B-Test.
 
 | Thema | Literatur | Folien / Materialien | Code | Arbeitsform |
 |---|---|---|---|---|
@@ -186,12 +200,21 @@ Ergänzend: [Lasso-Regression](https://kirenz.github.io/regression/docs/lasso.ht
 | Python-Funktion als Werkzeug | [Ein eigenes Rechenwerkzeug](agents-tools.qmd) | Im ADK-Labor: `calculator_agent` | Präsenz und Übung |
 | Umsatzdatei abfragen und Ergebnisse prüfen | [Ein Agent für Datenanalysen](agents-data.qmd) | Im ADK-Labor: `analytics_agent` | Übung |
 
-## GitHub-Übungsvorlagen
+## Lokale Arbeitsumgebung
+
+Die Analysen laufen lokal mit uv und Jupyter Lab. Ein Coding-Agent arbeitet im selben Projektordner. Die Rollen sind nach Material verteilt:
+
+- **Statistik-Labor:** Erklärte Beispiele nachvollziehen und Analyseaufträge an einen Coding-Agenten mit anschließender Gegenprüfung bearbeiten.
+- **Pandas- und Modellübungen:** Aufgaben selbst lösen. Ein Coding-Agent erklärt Fehlermeldungen und gibt Hinweise. Eine fertige eigene Lösung kann er kommentieren.
+- **Projekt:** Analyseschritte mit einem Coding-Agenten entwickeln und jedes Ergebnis fachlich prüfen.
+
+Die Regeln für den Agenten stehen jeweils in der `AGENTS.md` des Projektordners. Die geltenden Vorgaben zum KI-Einsatz in Prüfungsleistungen stehen im Moodle-Kurs.
 
 Die Vorlagen liefern eine eigene Arbeitskopie mit Aufgaben und Startanleitung. Zugriff erfolgt über das für den Kurs freigeschaltete GitHub-Konto.
 
 | Vorlage | Verwendung |
 |---|---|
+| [Statistik-Labor](programming-requirements.qmd) (Download) | Erklärte Beispiele zu Exploration, Inferenz und Modellprüfung |
 | [GitHub-Einstieg](https://github.com/data-analytics-ws2627/github-starter-course) | Branch, Commit und Pull Request kennenlernen |
 | [Pandas-Übungen](https://github.com/data-analytics-ws2627/ae-pandas) | Daten einlesen, aufbereiten und untersuchen |
 | [Modellübungen](https://github.com/data-analytics-ws2627/ae-models) | Vorhersagen, Fehlermaße und Regression nachvollziehen |

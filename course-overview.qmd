@@ -33,7 +33,7 @@ Die kompakte Übersicht zeigt einen Planungsvorschlag für das Wintersemester 20
 
 ## Übungen und Vertiefung
 
-Die [Pandas- und Modellübungen](course-materials.qmd#github-übungsvorlagen) begleiten die Themen. Dazu gehören Datenaufbereitung, explorative Analyse, Vorhersagen und Fehlermaße. Erste Schritte werden gemeinsam besprochen; die weitere Bearbeitung erfolgt selbstständig.
+Die [Pandas- und Modellübungen](course-materials.qmd#lokale-arbeitsumgebung) begleiten die Themen. Dazu gehören Datenaufbereitung, explorative Analyse, Vorhersagen und Fehlermaße. Erste Schritte werden gemeinsam besprochen; die weitere Bearbeitung erfolgt selbstständig.
 
 Zusätzliche Vertiefungen umfassen Datenbeschaffung, das Survey-Labor, erweiterte Regressionsmodelle und Verfahren zur Modellauswahl. Die [Materialübersicht](course-materials.qmd) enthält die zugehörigen Folien, Buchabschnitte und Notebooks in der fachlichen Reihenfolge.
 
