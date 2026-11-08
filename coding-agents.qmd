@@ -16,7 +16,7 @@ Im Statistik-Labor und im Projekt übernimmt der Agent Berechnungen. Die Prüfun
 
 Ein Coding-Agent kann Daten einlesen und Berechnungen ausführen. Die Wahl einer geeigneten Bezugsgröße und die Interpretation des Ergebnisses müssen fachlich geprüft werden. Beim Netflix-Beispiel ist der Anteil positiver Ergebnisse innerhalb jeder Gruppe relevant.
 
-Voraussetzung: Das Statistik-Labor ist entpackt und im Coding-Agenten geöffnet.
+Voraussetzung: Die eigene Arbeitskopie des Statistik-Labors ist geklont und im Coding-Agenten geöffnet.
 
 1. Diesen Auftrag im Projektordner ausführen lassen.
 

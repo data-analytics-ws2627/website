@@ -190,7 +190,7 @@ Lokales Beispiel im [Statistik-Labor](programming-requirements.qmd): `inferenz/i
 | Teilnehmer, Daten und Aufgabentypen | | [Zuständigkeiten und Daten](bpmn.qmd#bpmn-teilnehmer-daten) | | Selbststudium und Übung |
 | Analyseworkflow | | [Vom Lifecycle zum Workflow](bpmn.qmd#bpmn-analyseworkflow) | | Präsenz und Übung |
 | Einen Analyseprozess modellieren | | [Lifecycle-Übung](bpmn.qmd#bpmn-analyseauftrag) | | Übung |
-| Analyseauftrag an einen Coding-Agenten und Gegenprüfung | | [Coding-Agenten für Analyseaufträge](coding-agents.qmd) | [Statistik-Labor](downloads/statistik-lab.zip) | Präsenz und Übung |
+| Analyseauftrag an einen Coding-Agenten und Gegenprüfung | | [Coding-Agenten für Analyseaufträge](coding-agents.qmd) | [Statistik-Labor](https://github.com/data-analytics-ws2627/statistik-lab "Übungsvorlage auf GitHub öffnen") | Präsenz und Übung |
 
 ## Agents mit Google ADK
 
@@ -214,7 +214,7 @@ Die Vorlagen liefern eine eigene Arbeitskopie mit Aufgaben und Startanleitung. Z
 
 | Vorlage | Verwendung |
 |---|---|
-| [Statistik-Labor](programming-requirements.qmd) (Download) | Erklärte Beispiele zu Exploration, Inferenz und Modellprüfung |
+| [Statistik-Labor](https://github.com/data-analytics-ws2627/statistik-lab) | Erklärte Beispiele zu Exploration, Inferenz und Modellprüfung; Einrichtung unter [Python-Umgebung](programming-requirements.qmd) |
 | [GitHub-Einstieg](https://github.com/data-analytics-ws2627/github-starter-course) | Branch, Commit und Pull Request kennenlernen |
 | [Pandas-Übungen](https://github.com/data-analytics-ws2627/ae-pandas) | Daten einlesen, aufbereiten und untersuchen |
 | [Modellübungen](https://github.com/data-analytics-ws2627/ae-models) | Vorhersagen, Fehlermaße und Regression nachvollziehen |

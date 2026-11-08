@@ -18,9 +18,15 @@ uv --version
 
 ## Statistik-Labor vorbereiten
 
-1. Das [Statistik-Labor herunterladen](downloads/statistik-lab.zip).
-2. Die ZIP-Datei entpacken.
-3. Den Ordner öffnen, der `pyproject.toml` und `uv.lock` enthält.
+Voraussetzung: Ein GitHub-Konto mit Zugriff auf die Kursorganisation.
+
+1. Die [Vorlage Statistik-Labor](https://github.com/data-analytics-ws2627/statistik-lab) öffnen.
+2. „Use this template“ und „Create a new repository“ wählen.
+3. Einen eigenen Repository-Namen vergeben und die Sichtbarkeit „Private“ wählen.
+4. Das eigene Repository mit GitHub Desktop oder dem vorhandenen Git-Werkzeug klonen.
+5. Den geklonten Ordner öffnen, der `pyproject.toml` und `uv.lock` enthält.
+
+Die Git-Historie zeigt später, welche Dateien ein Coding-Agent geändert hat. Ohne Zugriff auf die Kursorganisation steht das Labor als [ZIP-Datei](downloads/statistik-lab.zip) bereit; Änderungen lassen sich dann nicht über Git nachvollziehen.
 
 Die folgenden Befehle werden im Terminal ausgeführt. macOS verwendet das Terminal; unter Windows eignen sich Git Bash oder PowerShell.
 
