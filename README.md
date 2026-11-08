@@ -12,6 +12,6 @@ quarto preview --port 4200 --no-browser
 quarto render
 ```
 
-Die Ausgabe liegt in `_site/`. Der Veröffentlichungsworkflow wird ausschließlich manuell ausgelöst. GitHub Pages ist noch nicht eingerichtet.
+Die Ausgabe liegt in `_site/`. Die Website erscheint unter https://data-analytics-ws2627.github.io/website/. Der Workflow „Quarto Publish“ wird ausschließlich manuell über GitHub Actions ausgelöst. Er rendert die Website und veröffentlicht die Ausgabe über GitHub Pages.
 
 Die ursprüngliche Organisation bleibt unverändert. Persönliche Abgaben und frühere Classroom-Einladungen werden nicht übernommen. Aktuelle Termine, Moodle-Zuordnung und Prüfungsmodalitäten werden im aktuellen Moodle-Kurs gepflegt.
