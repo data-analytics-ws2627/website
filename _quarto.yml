@@ -13,6 +13,7 @@ project:
     - agents-tools.qmd
     - agents-data.qmd
     - data-storytelling.qmd
+    - project-planning.qmd
     - project-description.qmd
     - project-tips-resources.qmd
   resources:
@@ -106,6 +107,8 @@ website:
 #            text: Troubleshooting
       - section: "Projekt"
         contents:
+          - href: project-planning.qmd
+            text: Projektvorbereitung
           - href: project-description.qmd
             text: Beschreibung
           - href: project-tips-resources.qmd

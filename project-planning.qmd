@@ -1,0 +1,182 @@
+---
+title: "Projektvorbereitung: Prozesse, Daten und Agenten"
+toc-depth: 2
+---
+
+Die Projektvorbereitung verbindet einen Anwendungsfall mit einer konkreten Analysefrage. In vier Schritten entstehen eine Prozessbeschreibung, ein Datenbedarf und überprüfbare Erfolgskriterien.
+
+Agentic AI bezeichnet hier den Einsatz eines KI-Agenten, der innerhalb eines festgelegten Auftrags Werkzeuge verwendet. Abhängig von Zwischenergebnissen kann er weitere Schritte auswählen. Für das Projektkonzept wird beschrieben, welche Aufgaben dafür geeignet sind und welche Entscheidungen bei Menschen bleiben.
+
+Die vier Abschnitte ergänzen die Folien zur [Planungsphase](https://kirenz.github.io/ds-python/docs/plan.html). Die fachlichen Anforderungen stehen in der [Projektbeschreibung](project-description.qmd). Für den zulässigen KI-Einsatz gelten die Angaben im aktuellen Moodle-Kurs.
+
+## 1. Use case identification: einen Anwendungsfall auswählen {#use-case}
+
+Ein Anwendungsfall beschreibt, wer ein Analyseergebnis für welche Entscheidung benötigt. Ausgangspunkt kann das Geschäftsmodell aus den Folien sein: Wo entstehen Leistungen, Kosten oder Probleme? Ein konkreter Arbeitsablauf zeigt anschließend, an welcher Stelle Daten helfen können.
+
+Business Process Management (BPM), auf Deutsch Prozessmanagement, beschäftigt sich mit der Gestaltung und Verbesserung solcher Abläufe. Dazu gehören der Auslöser, die beteiligten Rollen, die Arbeitsschritte und das verwendbare Ergebnis.
+
+### Beispiel: Serviceanfragen bearbeiten
+
+Das folgende Beispiel ist fiktiv. Ein Serviceteam möchte bei neu eingehenden Anfragen den Bearbeitungsaufwand besser einschätzen. Bisher liest eine Person die Angaben und sucht vergleichbare abgeschlossene Fälle.
+
+Eine Datenanalyse könnte untersuchen, welche Merkmale mit der Bearbeitungsdauer und einer notwendigen Weiterleitung an Spezialisten zusammenhängen. Ein Agent könnte die verfügbaren Daten prüfen, festgelegte Analysewerkzeuge aufrufen und Ergebnisse zusammenstellen. Das Serviceteam entscheidet über die tatsächliche Bearbeitung.
+
+Ein gewöhnliches Programm kann bekannte Berechnungen nach festen Regeln ausführen. Ein Agent kommt beispielsweise infrage, wenn unterschiedliche Fragen passende Werkzeugaufrufe erfordern. Die Wahl wird aus dem Ablauf begründet.
+
+### Aufgabe: einen eigenen Ablauf untersuchen
+
+Voraussetzung: Ein fachliches Interessengebiet und zwei mögliche Datenquellen gemäß der [Datenauswahl](project-description.qmd#datenauswahl).
+
+1. Die durch die Analyse unterstützte Leistung oder Entscheidung beschreiben.
+2. Die Personen benennen, die das Ergebnis verwenden.
+3. Den bisherigen Ablauf vom Auslöser bis zum Ergebnis beschreiben.
+4. Ein konkretes Problem in diesem Ablauf benennen.
+5. Eine mögliche Agentenaufgabe einem Arbeitsschritt zuordnen.
+6. Begründen, ob feste Regeln genügen oder ein Agent zusätzlichen Nutzen bieten könnte.
+
+**Ergebnis:** Eine kurze Beschreibung mit Nutzergruppe, Prozess, Problem und möglicher Agentenaufgabe.
+
+**Prüfkriterium:** Die Beschreibung nennt eine konkrete Verwendung des Analyseergebnisses und eine davon abgegrenzte Agentenaufgabe.
+
+## 2. Frame the Problem: Frage und Prozess abgrenzen {#problem}
+
+Eine Projektfrage legt fest, was mit den Daten untersucht wird. Die geplante Verwendung erklärt, welche Entscheidung dadurch unterstützt werden soll. Der Auftrag an einen Agenten beschreibt die Arbeitsschritte, die er dafür übernehmen darf.
+
+Im Servicebeispiel lautet die Analysefrage: Wie gut lassen sich Bearbeitungsdauer und Weiterleitung aus den beim Eingang bekannten Angaben vorhersagen? Die Ergebnisse könnten die Arbeitsplanung unterstützen. Ob der geplante Einsatz tatsächlich Wartezeiten senkt, müsste später gesondert untersucht werden.
+
+### Ist- und Soll-Prozess
+
+Der Ist-Prozess beschreibt den bisherigen Ablauf. Der Soll-Prozess beschreibt den geplanten Ablauf mit Datenanalyse und möglicher Agentenunterstützung.
+
+::: {.table-responsive tabindex="0"}
+
+| Schritt | Bisheriger Ablauf | Geplanter Ablauf |
+|---|---|---|
+| Anfrage erfassen | Eine Person sammelt die Angaben. | Das Serviceteam stellt freigegebene Angaben bereit. |
+| Datengrundlage prüfen | Eine Person sucht und prüft vergleichbare Fälle. | Der Agent ruft ein Datenwerkzeug auf und meldet fehlende Angaben. |
+| Einschätzung vorbereiten | Eine Person schätzt Dauer und Weiterleitung ein. | Geprüfte Modelle liefern Vorhersagen; der Agent stellt Ergebnisse und Grenzen zusammen. |
+| Bearbeitung festlegen | Das Serviceteam entscheidet über Zuständigkeit und Priorität. | Das Serviceteam prüft den Vorschlag und entscheidet über die Bearbeitung. |
+
+:::
+
+Der Agent erhält Zugriff auf festgelegte Daten und Werkzeuge. Bei ungeeigneten Daten geht der Ablauf zur Datenklärung zurück. Ein unzuverlässiges Modell führt zur Überarbeitung oder zu einer Bearbeitung ohne Modellunterstützung.
+
+### Eine einfache BPMN-Skizze
+
+BPMN (Business Process Model and Notation) ist eine standardisierte Zeichensprache für Prozesse. Eine erste Skizze benötigt wenige Elemente:
+
+- Ein **Startereignis** markiert den Auslöser, beispielsweise „Anfrage eingegangen“.
+- Eine **Aufgabe** beschreibt eine Tätigkeit, beispielsweise „Daten prüfen“.
+- Ein **exklusives Gateway** stellt eine Entscheidung dar, beispielsweise „Daten vollständig?“. Genau einer der Wege „ja“ oder „nein“ wird gewählt.
+- Ein **Endereignis** beschreibt das erreichte Ergebnis, beispielsweise „Bearbeitung festgelegt“.
+
+Pfeile verbinden die Elemente. Die Aufgaben erhalten eine zuständige Rolle, etwa Serviceteam oder Agent. Die [BPMN-Grundelemente](bpmn.qmd#bpmn-grundelemente) zeigen die Formen; der Abschnitt [Gateways](bpmn.qmd#bpmn-gateways) erläutert Entscheidungen und Rückwege.
+
+### Aufgabe: den geplanten Ablauf skizzieren
+
+Voraussetzung: Die Beschreibung aus Schritt 1 und die erläuterten BPMN-Grundelemente.
+
+1. Eine untersuchbare Analysefrage formulieren.
+2. Die Entscheidung beschreiben, die durch das Ergebnis unterstützt werden soll.
+3. Den bisherigen Ablauf mit Auslöser, Aufgaben und Ergebnis skizzieren.
+4. Den geplanten Ablauf mit der vorgesehenen Agentenaufgabe skizzieren.
+5. Jeder Aufgabe eine zuständige Rolle zuordnen.
+6. Eine fachliche Prüfung mit einem Rückweg bei ungeeigneten Ergebnissen ergänzen.
+7. Die Entscheidungen benennen, die bei Menschen bleiben.
+
+**Ergebnis:** Eine Projektfrage und zwei einfache Prozessskizzen mit Zuständigkeiten und Prüfschritt.
+
+**Prüfkriterium:** Aus der Skizze geht hervor, was der Agent übernehmen darf und wie der Ablauf bei fehlenden Daten weitergeht.
+
+## 3. Identify Variables: Daten und Werkzeuge bestimmen {#variables}
+
+Eine Variable beschreibt ein Merkmal der beobachteten Fälle. Vor der Auswahl einzelner Spalten wird die Beobachtungseinheit festgelegt. Im Servicebeispiel entspricht eine Zeile einer abgeschlossenen Anfrage.
+
+Für die geplante Anwendung stehen nur Angaben zur Verfügung, die beim Eingang bekannt sind. Später entstandene Informationen können eine Vorhersage im Test besser erscheinen lassen, als sie im Einsatz wäre. Das wird als Datenleckage bezeichnet.
+
+::: {.table-responsive tabindex="0"}
+
+| Merkmal im fiktiven Beispiel | Bedeutung und Rolle |
+|---|---|
+| Bearbeitungsdauer in Stunden | Quantitative Zielvariable für die Regression |
+| Weiterleitung an Spezialisten: ja/nein | Kategoriale Zielvariable für die Klassifikation |
+| Produktgruppe, Eingangskanal, gemeldeter Fehlertyp | Mögliche kategoriale Prädiktoren, sofern beim Eingang bekannt |
+| Produktalter in Monaten | Möglicher numerischer Prädiktor |
+| Anfragekennung | Kennung zum Zuordnen von Fällen, kein fachlich sinnvoller Prädiktor |
+| Abschlussdatum und abschließender Bearbeitungscode | Spätere Angaben; als Prädiktoren für die Eingangssituation ungeeignet |
+
+:::
+
+Die Tabelle illustriert die Rollen. Für einen geeigneten Projektdatensatz gelten zusätzlich die Kriterien der [Projektbeschreibung](project-description.qmd#datenauswahl), insbesondere der Umfang und die Zahl sinnvoller Prädiktoren. Mehrere Anfragen derselben Person können abhängig sein und benötigen eine entsprechende Prüfung.
+
+Der Agent benötigt Werkzeuge für konkrete Aufgaben, etwa zum Lesen einer freigegebenen Datei, zur Datenprüfung oder zum Aufruf eines geprüften Modells. Eine Prognose stammt dabei aus dem Vorhersagemodell; der Agent steuert den Aufruf und erläutert das Ergebnis.
+
+### Aufgabe: ein Variablenverzeichnis vorbereiten
+
+Voraussetzung: Die Prozessskizze und die Beschreibung der möglichen Datenquellen.
+
+1. Die Beobachtungseinheit eines Datensatzes definieren.
+2. Eine quantitative und eine kategoriale Zielvariable benennen.
+3. Die möglichen Prädiktoren mit Bedeutung, Einheit und Verfügbarkeit beschreiben.
+4. Für jede Variable Rolle, Skalenniveau und Speicherformat ergänzen.
+5. Datenquelle, Nutzungsbedingungen und fehlende Angaben dokumentieren.
+6. Mögliche Abhängigkeiten zwischen den Beobachtungen prüfen.
+7. Den Agentenaufgaben benötigte Daten und Werkzeuge zuordnen.
+8. Angaben markieren, die zum geplanten Vorhersagezeitpunkt noch nicht bekannt sind.
+
+**Ergebnis:** Ein Variablenverzeichnis und eine Zuordnung von Agentenaufgaben zu Daten und Werkzeugen.
+
+**Prüfkriterium:** Zielvariablen, Prädiktoren und Kennungen sind getrennt. Der Datenbedarf passt zu den Arbeitsschritten und zum Vorhersagezeitpunkt.
+
+## 4. Define Metrics: Erfolg und Prüfung festlegen {#metrics}
+
+Erfolgskriterien verbinden die Projektfrage mit einer überprüfbaren Bewertung. Prozessnutzen, Modellgüte und Agentenleistung beschreiben dabei unterschiedliche Aspekte.
+
+::: {.table-responsive tabindex="0"}
+
+| Ebene | Beispiel einer Kennzahl | Prüfung |
+|---|---|---|
+| Prozessnutzen | Aktive Arbeitszeit für die Vorbereitung einer Einschätzung | Vergleichbare Fälle mit und ohne Unterstützung untersuchen; Qualität der Einschätzung mitprüfen. |
+| Regressionsmodell | Mittlerer absoluter Vorhersagefehler in Stunden (MAE) | Fehler auf zurückgehaltenen Fällen mit einer einfachen Baseline vergleichen. |
+| Klassifikationsmodell | Anteil erkannter notwendiger Weiterleitungen (Recall) | Übersehene und unnötige Weiterleitungen getrennt betrachten; mit einer Baseline vergleichen. |
+| Agentenleistung | Anteil vollständig korrekter Antworten auf festgelegte Prüffälle | Werkzeugwahl, Eingaben, Zahlen, Einheiten und Aussagen mit unabhängig geprüften Ergebnissen vergleichen. |
+
+:::
+
+Ein Modell kann gute Vorhersagen liefern, während der Agent sie falsch wiedergibt. Umgekehrt kann der Agent ein ungeeignetes Modell korrekt aufrufen. Beide Prüfungen sind erforderlich, wenn der geplante Ablauf beides verwendet.
+
+Für Agenten eignen sich auch Prüffälle mit fehlenden Angaben oder Fragen außerhalb seines Auftrags. Vor dem Durchlauf wird festgelegt, welche Antwort oder Rückfrage erwartet wird. Ein zweiter Agent kann Rückmeldung geben; die Referenz wird anhand der Daten und fachlichen Regeln geprüft.
+
+### Aufgabe: Erfolgskriterien formulieren
+
+Voraussetzung: Projektfrage, Prozessskizze und Variablenverzeichnis. Die Modellkennzahlen werden in den späteren Kurseinheiten ausführlich behandelt.
+
+1. Den erwarteten Nutzen im beschriebenen Prozess formulieren.
+2. Eine dazu passende Prozesskennzahl wählen.
+3. Einen Vergleich mit dem bisherigen Ablauf beschreiben.
+4. Vorläufige Gütemaße und Baselines für Regression und Klassifikation notieren.
+5. Begründen, welche Vorhersagefehler fachlich besonders relevant sind.
+6. Einen normalen Agentenprüffall mit unabhängig prüfbarem Ergebnis beschreiben.
+7. Einen Prüffall mit fehlenden Daten und einer erwarteten Rückfrage ergänzen.
+8. Einen vorläufigen Akzeptanzmaßstab begründen oder die dafür fehlenden Informationen benennen.
+
+**Ergebnis:** Erfolgskriterien mit Kennzahl, Vergleichsmaßstab, Prüfverfahren und begründeter Anforderung.
+
+**Prüfkriterium:** Jede Kennzahl beantwortet eine konkrete Bewertungsfrage. Erwarteter Prozessnutzen und bereits nachgewiesene Leistung bleiben unterscheidbar.
+
+## Übertragung in den Projektvorschlag
+
+Die Ergebnisse unterstützen die vier Teile des [Projektvorschlags](project-description.qmd#projektvorschlag):
+
+::: {.table-responsive tabindex="0"}
+
+| Teil des Projektvorschlags | Beitrag aus der Vorbereitung |
+|---|---|
+| Einordnung | Anwendungsfall, Nutzergruppe, Projektfrage und geplante Verwendung |
+| Daten | Quellen, Beobachtungseinheit, Verfügbarkeit und Grenzen |
+| Analyseplan | Zielvariablen, Modelle, Baselines und Erfolgskriterien; Prozessskizze zur Einordnung möglicher Agentenaufgaben |
+| Variablenverzeichnis | Bedeutung, Rolle, Skalenniveau und Speicherformat der Variablen |
+
+:::
+
+Die Skizzen dienen der Vorbereitung. Ob ein Agent umgesetzt oder ein BPMN-Modell abgegeben wird, richtet sich nach den aktuellen Projektvorgaben in Moodle. Die folgenden Kurseinheiten liefern die Methoden, um den Analyseplan auszuarbeiten und seine Ergebnisse zu prüfen.

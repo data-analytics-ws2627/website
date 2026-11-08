@@ -28,6 +28,8 @@ Die Auswahl für das Projekt erfolgt aus diesen Vorschlägen. Ein späterer Wech
 
 ## Projektvorschlag
 
+Die [Projektvorbereitung](project-planning.qmd) führt von einem Anwendungsfall über eine Prozessskizze zu Datenbedarf und Erfolgskriterien. Sie unterstützt die Ausarbeitung des Vorschlags und ordnet mögliche Agentenaufgaben in den Analyseprozess ein.
+
 Der Projektvorschlag verbindet die Frage mit einem begründeten Analyseplan. Er enthält vier Teile:
 
 1. **Einordnung:** Thema, Motivation, Forschungsfrage und gegebenenfalls Hypothesen beschreiben. Fachliche Aussagen mit Quellen belegen.
