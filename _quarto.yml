@@ -95,10 +95,12 @@ website:
               - agents-data.qmd
           - data-storytelling.qmd
 
-      - section: "Einrichtung"
+      - section: "Vorbereitung"
         contents:
+          - href: https://kurse.kirenz.de/courses/agent-arbeitsumgebung
+            text: Agenten-Grundlagenkurs
           - href: programming-requirements.qmd
-            text: Python-Umgebung
+            text: Python-Umgebung und Statistik-Labor
 #          - href: programming-troubleshooting.qmd
 #            text: Troubleshooting
       - section: "Projekt"

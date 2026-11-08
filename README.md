@@ -2,7 +2,7 @@
 
 Kurswebsite auf Grundlage von [Data Analytics WS 2024/25](https://github.com/data-analytics-ws2425/website). Die bestehenden Folien, Buchverweise und Python-Notebooks bilden die Statistik-Grundlage. Ergänzt werden uv, die Arbeit mit Coding-Agenten und BPMN für Data-Science-Prozesse.
 
-Die Startseite zeigt direkt den Kursplan mit den Unterlagen in Vorlesungsreihenfolge. Die Quelle `course-materials.qmd` erzeugt `index.html`; die bisherige Adresse `course-materials.html` leitet einschließlich Abschnittsanker dorthin weiter. Onlinebücher stehen unter einem eigenen Menüpunkt. Einordnung und Arbeitsformen stehen unter „Kursinformationen → Überblick“.
+Die Startseite beginnt mit „Introduction“ und zeigt die Unterlagen in Vorlesungsreihenfolge. Einrichtung und Agenten-Grundlagenkurs stehen links unter „Vorbereitung“. Die Quelle `course-materials.qmd` erzeugt `index.html`; die bisherige Adresse `course-materials.html` leitet einschließlich Abschnittsanker dorthin weiter. Onlinebücher stehen unter einem eigenen Menüpunkt. Einordnung und Arbeitsformen stehen unter „Kursinformationen → Überblick“.
 
 ## Lokal ansehen
 

@@ -6,14 +6,6 @@ aliases:
   - course-materials.html
 ---
 
-## Einstieg mit KI und Arbeitsumgebung
-
-| Thema | Literatur | Materialien | Code | Arbeitsform |
-|---|---|---|---|---|
-| Bedeutung von KI für die eigene Arbeit und Rolle | | | | Präsenz |
-| Produktiv mit einem Agenten arbeiten | | [Vollständiger Grundlagenkurs](https://kurse.kirenz.de/courses/agent-arbeitsumgebung) | | Selbststudium |
-| Python-Umgebung und Statistik-Labor | [Toolkit](https://kirenz.github.io/toolkit-de/) | [Einrichtung mit uv](programming-requirements.qmd) | [Statistik-Labor](downloads/statistik-lab.zip) | Selbststudium |
-
 ## Introduction
 
 | Thema | Literatur | Folien / Materialien | Code | Arbeitsform |
