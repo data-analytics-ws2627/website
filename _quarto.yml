@@ -16,6 +16,7 @@ project:
     - project-description.qmd
     - project-tips-resources.qmd
   resources:
+    - fonts/**
     - code-inputs.js
     - downloads/*
     - bpmn/**
@@ -113,7 +114,9 @@ website:
 
 format:
   html:
-    css: code-inputs.css
+    css:
+      - code-inputs.css
+      - includes/kurslandkarte.css
     include-after-body:
       - text: |
           <script src="code-inputs.js"></script>

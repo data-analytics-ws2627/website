@@ -6,6 +6,10 @@ aliases:
   - course-materials.html
 ---
 
+```{=html}
+{{< include includes/kurslandkarte.html >}}
+```
+
 ## Introduction
 
 | Thema | Literatur | Folien / Materialien | Code | Arbeitsform |

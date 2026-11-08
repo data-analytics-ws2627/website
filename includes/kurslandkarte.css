@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "Inter Kursgrafik";
+  src: url("../fonts/Inter-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Kursgrafik";
+  src: url("../fonts/Inter-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+.as-kurslandkarte {
+  --bg-000: #10131f;
+  --bg-100: #1b2033;
+  --ink: #eef0ff;
+  --text: #cad3f5;
+  --muted: #a9b1ce;
+  --line: #465071;
+  --lavender: #b7bdf8;
+  --mint: #8bd5ca;
+  --yellow: #eed49f;
+  --peach: #f5a97f;
+  container-type: inline-size;
+  font-family: "Inter Kursgrafik", system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg-000);
+  border-radius: 14px;
+  padding: 22px;
+  margin: 0 0 32px;
+  break-inside: avoid;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.as-kurslandkarte .as-kurslandkarte-title {
+  color: var(--ink);
+  font-size: 19px;
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0 0 18px;
+  letter-spacing: -.02em;
+}
+.as-kurslandkarte .as-kurslandkarte-phases {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.25fr 1.1fr;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.as-kurslandkarte .as-kurslandkarte-phase {
+  --phase-color: var(--lavender);
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  margin: 0;
+  min-width: 0;
+  background: var(--bg-100);
+  border-top: 2px solid var(--phase-color);
+  border-radius: 4px;
+}
+.as-kurslandkarte .as-kurslandkarte-phase:not(:last-child)::after {
+  content: "→";
+  color: var(--lavender);
+  position: absolute;
+  top: 50%;
+  right: -17px;
+  transform: translateY(-50%);
+  font-size: 17px;
+}
+.as-kurslandkarte .as-kurslandkarte-data { --phase-color: var(--yellow); }
+.as-kurslandkarte .as-kurslandkarte-result { --phase-color: var(--mint); }
+.as-kurslandkarte .as-kurslandkarte-number {
+  color: var(--phase-color);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+.as-kurslandkarte .as-kurslandkarte-label {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.as-kurslandkarte a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+}
+.as-kurslandkarte a:hover { color: var(--mint); text-decoration-color: currentColor; }
+.as-kurslandkarte a:focus-visible { outline: 3px solid var(--peach); outline-offset: 4px; }
+.as-kurslandkarte .as-kurslandkarte-detail { color: var(--muted); }
+.as-kurslandkarte .as-kurslandkarte-return {
+  color: var(--muted);
+  text-align: center;
+  padding: 7px 0;
+  margin: 0 0 8px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+.as-kurslandkarte .as-kurslandkarte-return > span { color: var(--lavender); font-size: 17px; margin-right: 5px; }
+.as-kurslandkarte .as-kurslandkarte-tools p {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 12px;
+  margin: 5px 0 0;
+  font-size: 12px;
+}
+.as-kurslandkarte .as-kurslandkarte-tools a { color: var(--lavender); font-weight: 600; }
+
+@container (max-width: 640px) {
+  .as-kurslandkarte .as-kurslandkarte-phases { grid-template-columns: 1fr; gap: 14px; }
+  .as-kurslandkarte .as-kurslandkarte-phase { display: grid; grid-template-columns: 24px 130px 1fr; gap: 10px; align-items: start; }
+  .as-kurslandkarte .as-kurslandkarte-phase:not(:last-child)::after { content: "↓"; left: 18px; right: auto; top: auto; bottom: -19px; transform: none; font-size: 16px; }
+  .as-kurslandkarte .as-kurslandkarte-tools p { grid-template-columns: 1fr; gap: 2px; margin-top: 10px; }
+}
+@container (max-width: 390px) {
+  .as-kurslandkarte .as-kurslandkarte-phase { grid-template-columns: 22px 1fr; gap: 5px 8px; }
+  .as-kurslandkarte .as-kurslandkarte-description { grid-column: 2; }
+}
+@media print {
+  .as-kurslandkarte { border: 1px solid var(--line); }
+}
