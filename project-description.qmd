@@ -4,7 +4,7 @@ title: "Analyseprojekt"
 
 ## Fragestellung und Daten
 
-Das Teamprojekt untersucht eine eigene Fragestellung mit den Methoden des Kurses. Die Analyse umfasst Regression und Klassifikation. Dafür werden eine quantitative und eine kategoriale Zielvariable benötigt.
+Das Teamprojekt untersucht eine eigene Fragestellung mit den Methoden des Kurses. Fachlicher Kern ist eine Regression: Eine quantitative Zielvariable wird vorhergesagt, und die Vorhersage unterstützt eine Entscheidung in einem selbst gewählten Geschäftsprozess. Klassifikation bleibt ein Thema des Kurses, gehört aber nicht zu den Anforderungen des Projekts.
 
 Alle Analysen entstehen in Python. Datenaufbereitung, Modellierung und Bericht müssen aus den dokumentierten Ausgangsdaten reproduzierbar sein. Die einzelnen Beiträge zum Projekt werden durch nachvollziehbare Commits im gemeinsamen GitHub-Repository festgehalten.
 
@@ -16,11 +16,11 @@ Zunächst werden zwei mögliche Datensätze untersucht. Geeignet sind beispielsw
 
 Für das Projekt gelten folgende Kriterien:
 
-- Mindestens 100 Beobachtungen und zehn Variablen.
+- Mindestens 500 Beobachtungen und zehn Variablen. Bei einer Aufteilung von 80 zu 20 bleiben so mindestens 100 Beobachtungen für die Testbewertung.
 - Mindestens sechs unterschiedliche, fachlich sinnvolle Prädiktoren. Kennungen und doppelte Darstellungen desselben Merkmals zählen nicht dazu.
-- Eine quantitative Zielvariable für Regression und eine kategoriale Zielvariable für Klassifikation.
-- Beobachtungen, deren Unabhängigkeit fachlich begründet werden kann. Wiederholte Messungen und Zeitreihen erfordern eine andere Auswertung und werden vorab abgestimmt.
-- Keine Datensätze aus den Kursbeispielen oder daraus abgeleitete Varianten. Kaggle-Datensätze werden für dieses Projekt nicht verwendet.
+- Eine quantitative Zielvariable für die Regression, mit Einheit und fachlicher Bedeutung.
+- Beobachtungen ohne Zeitbezug, deren Unabhängigkeit fachlich begründet werden kann. Zeitreihen und wiederholte Messungen derselben Einheit erfordern eine andere Auswertung und sind für das Projekt nicht vorgesehen.
+- Keine Datensätze aus den Kursbeispielen oder daraus abgeleitete Varianten. Datensätze von Plattformen wie Kaggle sind zulässig, wenn Herkunft, ursprüngliche Erhebung und Nutzungsbedingungen dokumentiert sind.
 
 Für jeden Datensatz werden Quelle, ursprüngliche Erhebung, Beobachtungseinheit und wesentliche Variablen beschrieben. Eine erste Übersicht mit pandas zeigt Datentypen, fehlende Werte und den Umfang der Daten. Dazu gehört eine konkrete Frage, die mit diesen Daten untersucht werden kann.
 
@@ -32,9 +32,9 @@ Die [Projektvorbereitung](project-planning.qmd) führt von einem Anwendungsfall 
 
 Der Projektvorschlag verbindet die Frage mit einem begründeten Analyseplan. Er enthält vier Teile:
 
-1. **Einordnung:** Thema, Motivation, Forschungsfrage und gegebenenfalls Hypothesen beschreiben. Fachliche Aussagen mit Quellen belegen.
+1. **Einordnung:** Thema, Geschäftsprozess, unterstützte Entscheidung, Forschungsfrage und gegebenenfalls Hypothesen beschreiben. Fachliche Aussagen mit Quellen belegen.
 2. **Daten:** Beobachtungseinheit, Erhebung und Grenzen der Daten beschreiben.
-3. **Analyseplan:** Zielvariablen untersuchen, mögliche Prädiktoren benennen und geeignete Modelltypen begründen.
+3. **Analyseplan:** Zielvariable untersuchen, mögliche Prädiktoren benennen sowie Baseline und Regressionsmodell begründen.
 4. **Variablenverzeichnis:** Für jede Variable Name, Bedeutung, Rolle, Skalenniveau und Speicherformat dokumentieren.
 
 Die Rolle unterscheidet Zielvariable, Prädiktor und Kennung. Das Skalenniveau unterscheidet nominale, ordinale und numerische Merkmale. Das Speicherformat beschreibt beispielsweise ganze Zahlen, Dezimalzahlen, Text oder Datumswerte.
@@ -49,13 +49,13 @@ Die Einleitung beschreibt die Frage und ihre fachliche Bedeutung. Anschließend 
 
 ### Daten und Exploration
 
-Die Daten werden eingelesen und auf Datentypen, fehlende Werte sowie auffällige Beobachtungen geprüft. Korrekturen und Ausschlüsse erhalten eine Begründung. Tabellen und Grafiken beschreiben die Zielvariablen sowie relevante Zusammenhänge.
+Die Daten werden eingelesen und auf Datentypen, fehlende Werte sowie auffällige Beobachtungen geprüft. Korrekturen und Ausschlüsse erhalten eine Begründung. Tabellen und Grafiken beschreiben die Zielvariable sowie relevante Zusammenhänge.
 
 Die Aufteilung in Trainings- und Testdaten richtet sich nach dem späteren Einsatz des Modells. Informationen aus den Testdaten dürfen weder die Auswahl von Prädiktoren noch die Anpassung der Datenaufbereitung beeinflussen.
 
 ### Modelle und Prüfung
 
-Für Regression und Klassifikation wird zunächst ein einfacher Vergleichsmaßstab (Baseline) festgelegt. Danach werden passende Modelle trainiert und anhand der Validierung verglichen. Die endgültige Bewertung erfolgt mit den zurückgehaltenen Testdaten.
+Für die Regression wird zunächst ein einfacher Vergleichsmaßstab (Baseline) festgelegt, beispielsweise der Mittelwert der Zielvariable in den Trainingsdaten. Ein lineares Regressionsmodell ist ein geeigneter Ausgangspunkt. Weitere Modelle werden nur ergänzt, wenn sie eine konkrete Frage beantworten, und anhand der Validierung verglichen. Die endgültige Bewertung erfolgt mit den zurückgehaltenen Testdaten. Baseline und Modell werden dabei auf denselben Testfällen und mit denselben Fehlermaßen verglichen, etwa MAE und RMSE in der Einheit der Zielvariable.
 
 Die Auswahl der Modelle und Prädiktoren wird fachlich begründet. Modellannahmen, Diagnoseergebnisse und mögliche Datenleckage werden geprüft. Ergebnisse werden im Hinblick auf die ursprüngliche Frage interpretiert.
 
@@ -63,11 +63,28 @@ Die Auswahl der Modelle und Prädiktoren wird fachlich begründet. Modellannahme
 
 Der Entwurf nennt die bisherige Antwort auf die Frage und die erkennbaren Grenzen. Dazu gehören Probleme der Datenerhebung, Unsicherheit und Einschränkungen der Übertragbarkeit.
 
-## Coding-Agenten und Prozessmodell
+## Geschäftsprozess und Prozessmodell
+
+Ausgangspunkt ist ein selbst gewählter Geschäftsprozess, beispielsweise die Planung von Bearbeitungszeiten oder Bestellmengen. Ein realistischer, klar beschriebener Ablauf genügt. Ein realer Prozess oder Daten aus einem Unternehmen sind keine Voraussetzung.
+
+Eine einfache BPMN-Skizze stellt diesen Ablauf dar. Sie ist ein verbindlicher Bestandteil des Projekts und enthält Auslöser, wesentliche Aufgaben, Zuständigkeiten und ein Ergebnis. Die [Projektvorbereitung](project-planning.qmd) und die [BPMN-Grundlagen](bpmn.qmd) unterstützen die Ausarbeitung. Aus der Skizze und ihrer Erläuterung geht hervor:
+
+- welchen Schritt die Regression unterstützt, mit Eingaben, Ergebnis und Übergabe an eine Person,
+- an welcher Stelle eine Person das Ergebnis prüft oder die Entscheidung trifft,
+- wie der Ablauf bei ungeeigneten Daten oder Ergebnissen weitergeht,
+- wo feste Regeln genügen, wo KI als fester Prozessschritt sinnvoll wäre und ob ein Agent einen zusätzlichen Nutzen hätte.
+
+Ein Regressionsmodell benötigt kein Sprachmodell als Hülle. Ein fest programmierter Ablauf kann Daten prüfen, das Modell aufrufen und das Ergebnis anzeigen. Ein Agent wählt dagegen Werkzeuge abhängig von Zwischenergebnissen aus. Auch der begründete Verzicht auf einen Agenten ist ein vollständiges Ergebnis.
+
+## Streamlit-Oberfläche
+
+Eine einfache [Streamlit](https://streamlit.io/)-Anwendung macht die Analyse zugänglich. Sie ist ein verbindlicher Bestandteil des Projekts. Sie startet den festgelegten Analyseablauf oder zeigt dessen eindeutig bezeichnete Ergebnisse. Sichtbar sind Datenquelle, Zielvariable, der Vergleich von Baseline und Modell, eine passende Grafik und die wesentlichen Grenzen. Ungültige Eingaben führen zu einer verständlichen Meldung.
+
+Ein lokaler Start genügt. Die [Projektvorlage](https://github.com/data-analytics-ws2627/project) enthält ein lauffähiges Beispiel mit synthetischen Daten als Ausgangspunkt. Analysecode und Oberfläche bleiben getrennt, sodass derselbe Ablauf auch ohne Oberfläche reproduzierbar läuft. Die Oberfläche trifft keine Entscheidung. Ein Agent, etwa mit [Google ADK](agents.qmd), ist eine mögliche Erweiterung und keine Voraussetzung.
+
+## Coding-Agenten
 
 Für den Einsatz von KI gelten die Vorgaben des aktuellen Moodle-Kurses. Bei zulässigem Einsatz werden die übernommenen Arbeitsschritte und ihre Prüfung im Projekt dokumentiert. Dazu gehören erzeugter Code, Änderungen an Daten und die Kontrolle wesentlicher Ergebnisse. Vertrauliche Daten dürfen nur in dafür freigegebenen Werkzeugen verarbeitet werden.
-
-Ein BPMN-Modell kann den Analyseprozess mit Zuständigkeiten und Prüfschritten darstellen. Es macht beispielsweise sichtbar, wann Daten geprüft werden, wer ein Ergebnis bewertet und unter welchen Bedingungen eine Analyse überarbeitet wird. Der Ablauf orientiert sich an Frage/Meinung → Plan → Daten → Analyse → Report → Aktion → Evaluation.
 
 ## Peer Review
 
@@ -103,7 +120,7 @@ Der Bericht begründet Modelltypen, Prädiktoren und die Auswahl des endgültige
 
 ### Ergebnisse
 
-Die zentralen Ergebnisse werden mit passenden Kennzahlen und Grafiken dargestellt. Die Interpretation verbindet relevante Koeffizienten oder Vorhersagen mit der Forschungsfrage. Bei Vorhersageaufgaben gehört der Vergleich mit der Baseline dazu.
+Die zentralen Ergebnisse werden mit passenden Kennzahlen und Grafiken dargestellt. Die Interpretation verbindet relevante Koeffizienten oder Vorhersagen mit der Forschungsfrage und der unterstützten Entscheidung. Der Vergleich mit der Baseline gehört dazu. Auch ein Modell ohne überzeugenden Vorteil gegenüber der Baseline ist ein verwertbares Ergebnis, wenn es sauber untersucht und erklärt wird.
 
 ### Diskussion und Schlussfolgerung
 
