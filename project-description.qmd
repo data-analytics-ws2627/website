@@ -8,7 +8,7 @@ Das Teamprojekt untersucht eine eigene Fragestellung mit den Methoden des Kurses
 
 Alle Analysen entstehen in Python. Datenaufbereitung, Modellierung und Bericht müssen aus den dokumentierten Ausgangsdaten reproduzierbar sein. Die einzelnen Beiträge zum Projekt werden durch nachvollziehbare Commits im gemeinsamen GitHub-Repository festgehalten.
 
-Termine, Abgabeformate und Bewertung stehen im aktuellen [Moodle-Kurs](https://moodle.hdm-stuttgart.de/login/index.php). Dort werden auch die Projektvorlage und die Zuordnung für das Peer Review bereitgestellt.
+Termine, Abgabeformate und Bewertung stehen im aktuellen [Moodle-Kurs](https://moodle.hdm-stuttgart.de/login/index.php).
 
 ## Datenauswahl
 
@@ -85,26 +85,6 @@ Ein lokaler Start genügt. Die [Projektvorlage](https://github.com/data-analytic
 ## Coding-Agenten
 
 Für den Einsatz von KI gelten die Vorgaben des aktuellen Moodle-Kurses. Bei zulässigem Einsatz werden die übernommenen Arbeitsschritte und ihre Prüfung im Projekt dokumentiert. Dazu gehören erzeugter Code, Änderungen an Daten und die Kontrolle wesentlicher Ergebnisse. Vertrauliche Daten dürfen nur in dafür freigegebenen Werkzeugen verarbeitet werden.
-
-## Peer Review
-
-Das Peer Review prüft den Entwurf eines anderen Teams. Die Rückmeldung benennt konkrete Befunde und begründet Verbesserungsvorschläge. Die zugeordneten Teams stehen in Moodle.
-
-1. Den Analyseentwurf und die Projektstruktur lesen.
-2. Fragestellung, Datenbeschreibung und Analyseplan auf Übereinstimmung prüfen.
-3. Datenaufteilung, Modellwahl und Bewertung auf fachliche Fehler prüfen.
-4. Schlussfolgerungen mit den gezeigten Ergebnissen vergleichen.
-5. Die Rückmeldung als GitHub-Issue im vorgesehenen Projekt dokumentieren.
-
-Die Rückmeldung behandelt folgende Fragen:
-
-- Ist die Fragestellung klar, und sind die Daten dafür geeignet?
-- Sind Herkunft, Variablen und Aufbereitung nachvollziehbar?
-- Sind Methoden und Modellprüfung angemessen und verständlich erklärt?
-- Welche Schlussfolgerungen tragen die Ergebnisse, und welche gehen darüber hinaus?
-- Welche konkrete Änderung würde die Analyse oder ihre Darstellung verbessern?
-
-Prüfkriterium: Die Rückmeldung enthält mindestens einen begründeten Hinweis zur Modellierung und verweist auf die betroffene Stelle.
 
 ## Bericht
 

@@ -31,6 +31,10 @@ Die kompakte Übersicht zeigt einen Planungsvorschlag für das Wintersemester 20
 | **Agents mit Google ADK** | [Drei Einheiten mit ADK-Labor](agents.qmd): eigener Agent, Funktionswerkzeuge und Umsatzdatei | Werkzeugaufrufe und Ergebnisse am Rechenbeispiel prüfen; Übertragung auf Datenanalysen |
 | **Data Storytelling und Projekt** | [Data Storytelling](data-storytelling.qmd); eigene Analyse im [Teamprojekt](project-description.qmd) entwickeln und dokumentieren | Aussagen, Grafiken und Grenzen einer Analyse besprechen; Rückmeldung zu Fragestellung und Vorgehen |
 
+## Kursüberblick für Coding-Agenten
+
+Der [Kursüberblick für Agenten](downloads/kursueberblick-fuer-agenten.md){download="kursueberblick-fuer-agenten.md"} fasst verbindliche Bausteine, Themen mit ihrer Relevanz, entfallene Vorgaben und noch offene Punkte in einer Markdown-Datei zusammen. Die Datei dient als Gesprächsgrundlage mit einem Coding-Agenten oder Chat-Assistenten. Sie enthält einen Startauftrag, mit dem der Agent den eigenen Stand erfragt und die nächsten Schritte priorisiert. Termine und Prüfungsmodalitäten bleiben den Angaben im Moodle-Kurs vorbehalten.
+
 ## Übungen und Vertiefung
 
 Die [Pandas- und Modellübungen](course-materials.qmd#lokale-arbeitsumgebung) begleiten die Themen. Dazu gehören Datenaufbereitung, explorative Analyse, Vorhersagen und Fehlermaße. Erste Schritte werden gemeinsam besprochen; die weitere Bearbeitung erfolgt selbstständig.
